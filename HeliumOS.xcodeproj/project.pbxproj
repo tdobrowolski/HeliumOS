@@ -13,6 +13,14 @@
 		E190F622242929940030B996 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E190F621242929940030B996 /* Assets.xcassets */; };
 		E190F625242929940030B996 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E190F624242929940030B996 /* Preview Assets.xcassets */; };
 		E190F628242929940030B996 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E190F626242929940030B996 /* LaunchScreen.storyboard */; };
+		E190F63524293D470030B996 /* Product Sans Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E190F63124293D470030B996 /* Product Sans Bold.ttf */; };
+		E190F63624293D470030B996 /* Product Sans Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E190F63224293D470030B996 /* Product Sans Italic.ttf */; };
+		E190F63724293D470030B996 /* Product Sans Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E190F63324293D470030B996 /* Product Sans Regular.ttf */; };
+		E190F63824293D470030B996 /* Product Sans Bold Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E190F63424293D470030B996 /* Product Sans Bold Italic.ttf */; };
+		E1EE2E3A242AA4BD00F952CB /* LiveClockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EE2E39242AA4BD00F952CB /* LiveClockService.swift */; };
+		E1FDEBCC24310D0300E9EC63 /* UIAudioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FDEBCB24310D0300E9EC63 /* UIAudioService.swift */; };
+		E1FDEBCF24312B4700E9EC63 /* MediaContentGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FDEBCE24312B4700E9EC63 /* MediaContentGenerator.swift */; };
+		E1FDEBD12431335D00E9EC63 /* MediaItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FDEBD02431335D00E9EC63 /* MediaItemModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +32,14 @@
 		E190F624242929940030B996 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E190F627242929940030B996 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E190F629242929940030B996 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E190F63124293D470030B996 /* Product Sans Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Product Sans Bold.ttf"; sourceTree = "<group>"; };
+		E190F63224293D470030B996 /* Product Sans Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Product Sans Italic.ttf"; sourceTree = "<group>"; };
+		E190F63324293D470030B996 /* Product Sans Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Product Sans Regular.ttf"; sourceTree = "<group>"; };
+		E190F63424293D470030B996 /* Product Sans Bold Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Product Sans Bold Italic.ttf"; sourceTree = "<group>"; };
+		E1EE2E39242AA4BD00F952CB /* LiveClockService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveClockService.swift; sourceTree = "<group>"; };
+		E1FDEBCB24310D0300E9EC63 /* UIAudioService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAudioService.swift; sourceTree = "<group>"; };
+		E1FDEBCE24312B4700E9EC63 /* MediaContentGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaContentGenerator.swift; sourceTree = "<group>"; };
+		E1FDEBD02431335D00E9EC63 /* MediaItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaItemModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +72,9 @@
 		E190F61A242929930030B996 /* HeliumOS */ = {
 			isa = PBXGroup;
 			children = (
+				E190F62F24293CE70030B996 /* Fonts */,
+				E1FDEBCD2431122E00E9EC63 /* Services */,
+				E1FDEBD22431336200E9EC63 /* Models */,
 				E190F61B242929930030B996 /* AppDelegate.swift */,
 				E190F61D242929930030B996 /* SceneDelegate.swift */,
 				E190F61F242929930030B996 /* ContentView.swift */,
@@ -73,6 +92,35 @@
 				E190F624242929940030B996 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E190F62F24293CE70030B996 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				E190F63424293D470030B996 /* Product Sans Bold Italic.ttf */,
+				E190F63124293D470030B996 /* Product Sans Bold.ttf */,
+				E190F63224293D470030B996 /* Product Sans Italic.ttf */,
+				E190F63324293D470030B996 /* Product Sans Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		E1FDEBCD2431122E00E9EC63 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E1EE2E39242AA4BD00F952CB /* LiveClockService.swift */,
+				E1FDEBCB24310D0300E9EC63 /* UIAudioService.swift */,
+				E1FDEBCE24312B4700E9EC63 /* MediaContentGenerator.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		E1FDEBD22431336200E9EC63 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E1FDEBD02431335D00E9EC63 /* MediaItemModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,7 +181,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E190F63824293D470030B996 /* Product Sans Bold Italic.ttf in Resources */,
+				E190F63524293D470030B996 /* Product Sans Bold.ttf in Resources */,
 				E190F628242929940030B996 /* LaunchScreen.storyboard in Resources */,
+				E190F63724293D470030B996 /* Product Sans Regular.ttf in Resources */,
+				E190F63624293D470030B996 /* Product Sans Italic.ttf in Resources */,
 				E190F625242929940030B996 /* Preview Assets.xcassets in Resources */,
 				E190F622242929940030B996 /* Assets.xcassets in Resources */,
 			);
@@ -147,8 +199,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E190F61C242929930030B996 /* AppDelegate.swift in Sources */,
+				E1FDEBCC24310D0300E9EC63 /* UIAudioService.swift in Sources */,
 				E190F61E242929930030B996 /* SceneDelegate.swift in Sources */,
+				E1EE2E3A242AA4BD00F952CB /* LiveClockService.swift in Sources */,
+				E1FDEBCF24312B4700E9EC63 /* MediaContentGenerator.swift in Sources */,
 				E190F620242929930030B996 /* ContentView.swift in Sources */,
+				E1FDEBD12431335D00E9EC63 /* MediaItemModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +345,7 @@
 				DEVELOPMENT_TEAM = V9858W9DAL;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = HeliumOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -309,6 +366,7 @@
 				DEVELOPMENT_TEAM = V9858W9DAL;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = HeliumOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
