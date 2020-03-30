@@ -20,6 +20,8 @@ struct MediaItemModel: Identifiable {
     
     var id: String = UUID().uuidString
     
+    var isFocused: Bool = false
+    
     var title: String
     var genres: [String]?
     var mediaType: MediaType

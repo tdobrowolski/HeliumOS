@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct ContentView: View {
+        
     var body: some View {
         ZStack {
             BackgroundView()
@@ -37,7 +38,7 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 
-//MARK: My Components (Alpha)
+//MARK: My Components (Beta)
 
 struct NavigationBar: View {
     
@@ -86,16 +87,18 @@ struct MenuClickableButton: View {
 
 struct ItemDetailsView: View {
     
+    @EnvironmentObject var activeMenuItem: ActiveMenuItem
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
-            Text("Main item text")
+            Text(activeMenuItem.getActiveItem()?.largeTitle ?? "")
                 .font(.custom("Product Sans Bold", size: 62))
             HStack(spacing: 20) {
-                Text("Item title")
+                Text(activeMenuItem.getActiveItem()?.title ?? "")
                 Capsule()
                     .foregroundColor(.yellowNeon)
                     .frame(width: 4, height: 20, alignment: .center)
-                Text("Item genre")
+                Text(activeMenuItem.getFormattedGenresString())
                 Capsule()
                     .foregroundColor(.yellowNeon)
                     .frame(width: 4, height: 20, alignment: .center)
@@ -106,7 +109,8 @@ struct ItemDetailsView: View {
                         Image("controllerButtonA")
                             .resizable()
                             .frame(width: 30, height: 30)
-                        Text("Item action").foregroundColor(.black)
+                        Text(activeMenuItem.getButtonActionForActiveItem())
+                            .foregroundColor(.black)
                     }
                 }
             }.font(.custom("Product Sans Bold", size: 26))
@@ -116,16 +120,10 @@ struct ItemDetailsView: View {
 
 struct RawTiles: View {
     
-    let mediaItems = [MediaItemModel(title: "First", mediaType: .game),
-                         MediaItemModel(title: "Second", mediaType: .game),
-                         MediaItemModel(title: "Third", mediaType: .game),
-                         MediaItemModel(title: "Fourth", mediaType: .game),
-                         MediaItemModel(title: "Fifth", mediaType: .game),
-                         MediaItemModel(title: "Sixth", mediaType: .game),
-                         MediaItemModel(title: "Seventh", mediaType: .game)]
-    
+    @ObservedObject var mediaItemGenerator = MediaGenerator()
+
     var body: some View {
-        ForEach(mediaItems) { mediaItem in
+        ForEach(mediaItemGenerator.mediaItems) { mediaItem in
             MediaTile(mediaItem: mediaItem)
         }
     }
@@ -150,6 +148,8 @@ struct MainTilesList: View {
 
 struct MediaTile: View {
     
+    @EnvironmentObject var activeMenuItem: ActiveMenuItem
+    
     @State private var isFocused: Bool = false
         
     var mediaItem: MediaItemModel
@@ -171,6 +171,7 @@ struct MediaTile: View {
             .gesture(
                 TapGesture().onEnded { _ in
                     self.isFocused.toggle()
+                    self.activeMenuItem.setAsActive(item: self.mediaItem)
                 }
         )
     }
