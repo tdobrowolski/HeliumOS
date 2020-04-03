@@ -20,8 +20,6 @@ struct MediaItemModel: Identifiable {
     
     var id: String = UUID().uuidString
     
-    var isFocused: Bool = false
-    
     var title: String
     var genres: [String]?
     var mediaType: MediaType
@@ -29,4 +27,6 @@ struct MediaItemModel: Identifiable {
     var largeTitle: String?
     var backgroundMediaPath: String?
     var tileImagePath: String?
+    
+    var isDefault: Bool = false
 }

@@ -29,8 +29,12 @@ struct ContentView: View {
 }
 
 struct ContentView_Previews: PreviewProvider {
+    
+    static let activeMenuItem = ActiveMenuItem()
+    
     static var previews: some View {
         ContentView()
+            .environmentObject(activeMenuItem)
             .previewDevice(PreviewDevice(rawValue: "iPad8,1"))
             .previewDisplayName("iPad Pro")
             .previewLayout(.fixed(width: 1194, height: 834))
@@ -47,7 +51,7 @@ struct NavigationBar: View {
     var body: some View {
         HStack {
             HStack(spacing: 50) {
-                MenuClickableButton(menuItem: .home)
+                MenuClickableButton(isSelected: true, menuItem: .home)
                 MenuClickableButton(menuItem: .games)
                 MenuClickableButton(menuItem: .media)
                 MenuClickableButton(menuItem: .store)
@@ -73,6 +77,8 @@ struct NavigationBar: View {
 
 struct MenuClickableButton: View {
     
+    @State var isSelected: Bool = false
+    
     let menuItem: MenuItemType
     
     var body: some View {
@@ -80,7 +86,7 @@ struct MenuClickableButton: View {
             print("👆 \(self.menuItem) button was tapped")
         }) {
             Image(systemName: menuItem.rawValue)
-                .renderingMode(.original)
+                .foregroundColor(isSelected ? Color.blueNeon : .black)
         }
     }
 }
@@ -119,11 +125,11 @@ struct ItemDetailsView: View {
 }
 
 struct RawTiles: View {
-    
+        
     @ObservedObject var mediaItemGenerator = MediaGenerator()
 
     var body: some View {
-        ForEach(mediaItemGenerator.mediaItems) { mediaItem in
+        return ForEach(mediaItemGenerator.mediaItems) { mediaItem in
             MediaTile(mediaItem: mediaItem)
         }
     }
@@ -152,7 +158,7 @@ struct MediaTile: View {
     
     @State private var isFocused: Bool = false
         
-    var mediaItem: MediaItemModel
+    let mediaItem: MediaItemModel
     
     var body: some View {
         Rectangle()
@@ -170,10 +176,11 @@ struct MediaTile: View {
             .foregroundColor(.red)
             .gesture(
                 TapGesture().onEnded { _ in
-                    self.isFocused.toggle()
                     self.activeMenuItem.setAsActive(item: self.mediaItem)
                 }
-        )
+        ).onReceive(activeMenuItem.$highlightedMenuItem) { activeItem in
+            self.isFocused = activeItem?.id == self.mediaItem.id
+        }
     }
 }
 

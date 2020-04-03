@@ -10,7 +10,7 @@ import Foundation
 
 final class ActiveMenuItem: ObservableObject {
     
-    @Published var highlightedMenuItem: MediaItemModel?
+    @Published var highlightedMenuItem: MediaItemModel? = MediaGenerator().getDefaultItem()
     
     func setAsActive(item: MediaItemModel) {
         self.highlightedMenuItem = item
