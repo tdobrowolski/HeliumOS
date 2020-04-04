@@ -13,6 +13,7 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             BackgroundView()
+                .edgesIgnoringSafeArea(.all)
             VStack(spacing: 0) {
                 NavigationBar()
                     .padding([.top, .trailing], 60)
@@ -62,8 +63,10 @@ struct NavigationBar: View {
             HStack(spacing: 50) {
                 Text(liveClockService.currentTime)
                     .font(.custom("Product Sans Bold", size: 24))
+                    .foregroundColor(.white)
                 MenuClickableButton(menuItem: .notifications)
                 Image(systemName: "wifi")
+                    .foregroundColor(.white)
                 Image("avatar")
                     .resizable()
                     .frame(width: 60, height: 60)
@@ -86,7 +89,7 @@ struct MenuClickableButton: View {
             print("👆 \(self.menuItem) button was tapped")
         }) {
             Image(systemName: menuItem.rawValue)
-                .foregroundColor(isSelected ? Color.blueNeon : .black)
+                .foregroundColor(isSelected ? Color.blueNeon : .white)
         }
     }
 }
@@ -99,12 +102,15 @@ struct ItemDetailsView: View {
         VStack(alignment: .leading, spacing: 20) {
             Text(activeMenuItem.getActiveItem()?.largeTitle ?? "")
                 .font(.custom("Product Sans Bold", size: 62))
+                .foregroundColor(.white)
             HStack(spacing: 20) {
                 Text(activeMenuItem.getActiveItem()?.title ?? "")
+                    .foregroundColor(.white)
                 Capsule()
                     .foregroundColor(.yellowNeon)
                     .frame(width: 4, height: 20, alignment: .center)
                 Text(activeMenuItem.getFormattedGenresString())
+                    .foregroundColor(.white)
                 Capsule()
                     .foregroundColor(.yellowNeon)
                     .frame(width: 4, height: 20, alignment: .center)
@@ -116,7 +122,7 @@ struct ItemDetailsView: View {
                             .resizable()
                             .frame(width: 30, height: 30)
                         Text(activeMenuItem.getButtonActionForActiveItem())
-                            .foregroundColor(.black)
+                            .foregroundColor(.white)
                     }
                 }
             }.font(.custom("Product Sans Bold", size: 26))
@@ -161,7 +167,9 @@ struct MediaTile: View {
     let mediaItem: MediaItemModel
     
     var body: some View {
-        Rectangle()
+        Image(mediaItem.tileImagePath ?? "")
+            .resizable()
+            .aspectRatio(contentMode: .fit)
             .scaleEffect(isFocused ? 1.1 : 1.0)
             .clipShape(RoundedRectangle(cornerRadius: isFocused ? 10 : 0)
                 .scale(isFocused ? 1.1 : 1.0))
@@ -171,9 +179,7 @@ struct MediaTile: View {
                 .shadow(color: Color.blueNeon.opacity(isFocused ? 0.5 : 0), radius: 16, x: 0, y: 0))
             .zIndex(isFocused ? 1 : -1)
             .animation(.easeOut(duration: 0.1))
-            .background(Image(mediaItem.backgroundMediaPath ?? ""))
             .frame(width: 280, height: 280)
-            .foregroundColor(.red)
             .gesture(
                 TapGesture().onEnded { _ in
                     self.activeMenuItem.setAsActive(item: self.mediaItem)
@@ -185,12 +191,17 @@ struct MediaTile: View {
 }
 
 struct BackgroundView: View {
+    
+    @EnvironmentObject var activeMenuItem: ActiveMenuItem
+    
+    @State var showImageTransition: Bool = false
+    
     var body: some View {
         
-        let primaryNavBarColor = Color(red: 0, green: 0, blue: 0).opacity(0.1)
-        let secondaryNavBarColor = Color(red: 0.04, green: 0.04, blue: 0.04).opacity(0.15)
-        let primaryDetailsColor = Color(red: 0.18, green: 0.18, blue: 0.18).opacity(0.2)
-        let secondaryDetailsColor = Color(red: 0.33, green: 0.33, blue: 0.33).opacity(0.15)
+        let primaryNavBarColor = Color(red: 0, green: 0, blue: 0).opacity(0.3)
+        let secondaryNavBarColor = Color(red: 0.04, green: 0.04, blue: 0.04).opacity(0.25)
+        let primaryDetailsColor = Color(red: 0.18, green: 0.18, blue: 0.18).opacity(0.5)
+        let secondaryDetailsColor = Color(red: 0.33, green: 0.33, blue: 0.33).opacity(0.4)
         
         let gradientArray = Gradient(colors: [primaryNavBarColor,
                                               secondaryNavBarColor,
@@ -201,7 +212,20 @@ struct BackgroundView: View {
                                               .clear])
         
         return ZStack(alignment: .center) {
-//            Image("")
+            GeometryReader { geo in
+                Image(self.activeMenuItem.getActiveItem()?.backgroundMediaPath ?? "")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: geo.size.width, height: geo.size.height)
+                    .scaleEffect(self.showImageTransition ? 1.1 : 1)
+                    .opacity(self.showImageTransition ? 0.5 : 1)
+//                    .animation(.linear)
+//                    .transition(AnyTransition.opacity.combined(with: .slide))
+                    .onReceive(self.activeMenuItem.$highlightedMenuItem) { activeMenuItem in
+                        self.showImageTransition.toggle()
+                        self.showImageTransition.toggle()
+                }
+            }
             LinearGradient(gradient: gradientArray, startPoint: .top, endPoint: .bottom)
         }
     }

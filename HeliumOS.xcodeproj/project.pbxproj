@@ -74,6 +74,7 @@
 		E190F61A242929930030B996 /* HeliumOS */ = {
 			isa = PBXGroup;
 			children = (
+				E1E7CF8824390686003FF26E /* Sounds */,
 				E190F62F24293CE70030B996 /* Fonts */,
 				E1FDEBCD2431122E00E9EC63 /* Services */,
 				E1FDEBD22431336200E9EC63 /* Models */,
@@ -105,6 +106,13 @@
 				E190F63324293D470030B996 /* Product Sans Regular.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		E1E7CF8824390686003FF26E /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 		E1FDEBCD2431122E00E9EC63 /* Services */ = {

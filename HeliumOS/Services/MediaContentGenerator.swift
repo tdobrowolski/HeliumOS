@@ -21,13 +21,13 @@ enum MenuItemType: String {
 final class MediaGenerator: ObservableObject {
     
     @Published var mediaItems: [MediaItemModel] = [
-        MediaItemModel(title: "Cyberpunk 2077", genres: ["Action", "RPG"], mediaType: .game, largeTitle: "Discover Unexpected in 2077", backgroundMediaPath: "", tileImagePath: "", isDefault: true),
-        MediaItemModel(title: "Future Nostalgia by Dua Lipa", genres: ["Pop", "Dance"], mediaType: .music, largeTitle: "Get on the dancefloor", backgroundMediaPath: "", tileImagePath: ""),
-        MediaItemModel(title: "Resident Evil 3", genres: ["Horror", "Survival"], mediaType: .game, largeTitle: "Fight your way to freedom", backgroundMediaPath: "", tileImagePath: ""),
-        MediaItemModel(title: "Control", genres: ["Action", "Adventure"], mediaType: .game, largeTitle: "Unleash your hidden powers", backgroundMediaPath: "", tileImagePath: ""),
-        MediaItemModel(title: "Star Wars: The Rise of Skywalker", genres: ["Sci-Fi", "Action"], mediaType: .movie, largeTitle: "No one's ever really gone", backgroundMediaPath: "", tileImagePath: ""),
-        MediaItemModel(title: "Once Upon a Time... in Hollywood", genres: ["Drama", "Thriller"], mediaType: .movie, largeTitle: "Welcome to 1969 Los Angeles", backgroundMediaPath: "", tileImagePath: ""),
-        MediaItemModel(title: "Doom Eternal", genres: ["Action", "Shooter"], mediaType: .game, largeTitle: "Burn the hell", backgroundMediaPath: "", tileImagePath: "")]
+        MediaItemModel(title: "Cyberpunk 2077", genres: ["Action", "RPG"], mediaType: .game, largeTitle: "Discover Unexpected in 2077", backgroundMediaPath: "Cyberpunk2077Large", tileImagePath: "Cyberpunk2077Square", isDefault: true),
+        MediaItemModel(title: "Future Nostalgia by Dua Lipa", genres: ["Pop", "Dance"], mediaType: .music, largeTitle: "Get on the dancefloor", backgroundMediaPath: "FutureNostalgiaLarge", tileImagePath: "FutureNostalgiaSquare"),
+        MediaItemModel(title: "Resident Evil 3", genres: ["Horror", "Survival"], mediaType: .game, largeTitle: "Fight your way to freedom", backgroundMediaPath: "ResidentEvil3Large", tileImagePath: "ResidentEvil3Square"),
+        MediaItemModel(title: "Control", genres: ["Action", "Adventure"], mediaType: .game, largeTitle: "Unleash your hidden powers", backgroundMediaPath: "ControlLarge", tileImagePath: "ControlSquare"),
+        MediaItemModel(title: "Jurassic World: Fallen Kingdom", genres: ["Sci-Fi", "Action"], mediaType: .movie, largeTitle: "Welcome to Jurassic Park", backgroundMediaPath: "JurassicWorldFallenKingdomLarge", tileImagePath: "JurassicWorldFallenKingdomSquare"),
+        MediaItemModel(title: "Knives Out", genres: ["Crime", "Thriller"], mediaType: .movie, largeTitle: "Everyone is a suspect", backgroundMediaPath: "KnivesOutLarge", tileImagePath: "KnivesOutSquare"),
+        MediaItemModel(title: "Doom Eternal", genres: ["Action", "Shooter"], mediaType: .game, largeTitle: "Burn the Hell", backgroundMediaPath: "DoomEternalLarge", tileImagePath: "DoomEternalSquare")]
     
     func getDefaultItem() -> MediaItemModel? {
         return mediaItems.first
