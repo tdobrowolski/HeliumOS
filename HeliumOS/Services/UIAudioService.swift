@@ -9,23 +9,21 @@
 import Foundation
 import AVFoundation
 
-/// This singleton can work wrong.
-/// If it deallocates object too fast the voice won't play.
-/// Needs check!
-struct UIAudioService {
-    
-    enum SoundActionType: String {
-        case startup = "startup.mp3"
-        case select = "select.mp3"
-        case changeSelection = "changeSelection.mp3"
-    }
+enum SoundActionType: String {
+    case startup = "startup.wav"
+    case select = "select.wav"
+    case changeSelection = "changeSelection.wav"
+}
+
+final class UIAudioService {
     
     static let shared = UIAudioService()
-    private var soundPlayer: AVAudioPlayer?
-    
+
     private init() { }
     
-    mutating func playUISound(for soundType: SoundActionType) {
+    var soundPlayer: AVAudioPlayer?
+    
+    func playUISound(for soundType: SoundActionType) {
         guard let soundPath = Bundle.main.path(forResource: soundType.rawValue, ofType: nil) else {
             print("🔇 Can't find path for UI sound.")
             return
@@ -33,11 +31,10 @@ struct UIAudioService {
         let url = URL(fileURLWithPath: soundPath)
         
         do {
-            soundPlayer = try AVAudioPlayer(contentsOf: url)
-            soundPlayer?.play()
+            self.soundPlayer = try AVAudioPlayer(contentsOf: url)
+            self.soundPlayer?.play()
         } catch {
             print("🔇 Error while playing UI sound: \(error.localizedDescription)")
         }
     }
-    
 }

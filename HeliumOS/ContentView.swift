@@ -182,6 +182,7 @@ struct MediaTile: View {
             .frame(width: 280, height: 280)
             .gesture(
                 TapGesture().onEnded { _ in
+                    UIAudioService.shared.playUISound(for: .changeSelection)
                     self.activeMenuItem.setAsActive(item: self.mediaItem)
                 }
         ).onReceive(activeMenuItem.$highlightedMenuItem) { activeItem in
@@ -219,8 +220,7 @@ struct BackgroundView: View {
                     .frame(width: geo.size.width, height: geo.size.height)
                     .scaleEffect(self.showImageTransition ? 1.1 : 1)
                     .opacity(self.showImageTransition ? 0.5 : 1)
-//                    .animation(.linear)
-//                    .transition(AnyTransition.opacity.combined(with: .slide))
+                    .transition(.move(edge: .leading))
                     .onReceive(self.activeMenuItem.$highlightedMenuItem) { activeMenuItem in
                         self.showImageTransition.toggle()
                         self.showImageTransition.toggle()
