@@ -1,3 +1,5 @@
+![alt text](HeliumOS.png)
+
 # HeliumOS - made for big screens
 An iPad version of Helium, OS designed for big TVs.
 
