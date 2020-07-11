@@ -137,13 +137,17 @@ struct RawTiles: View {
     var body: some View {
         return ForEach(mediaItemGenerator.mediaItems) { mediaItem in
             MediaTile(mediaItem: mediaItem)
+                .id(mediaItem.id)
         }
     }
 }
 
 struct MainTilesList: View {
     
+    @EnvironmentObject var activeMenuItem: ActiveMenuItem
+    
     var body: some View {
+        ScrollViewReader { scrollProxy in
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(alignment: .center, spacing: 0) {
                     Rectangle()
@@ -154,7 +158,13 @@ struct MainTilesList: View {
                         .frame(width: 75, height: 350)
                         .foregroundColor(.clear)
                 }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 400, alignment: .leading)
+            }.onChange(of: activeMenuItem.highlightedMenuItem?.id) { tileId in
+                guard let tileId = tileId else { return }
+                withAnimation {
+                    scrollProxy.scrollTo(tileId)
+                }
             }
+        }
     }
 }
 
@@ -231,7 +241,7 @@ struct BackgroundView: View {
     }
 }
 
-//MARK: Color extensions
+// MARK: Color extensions
 
 extension Color {
     static let yellowNeon = Color("yellowNeon")
