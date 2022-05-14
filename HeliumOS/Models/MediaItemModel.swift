@@ -42,3 +42,5 @@ struct MediaItemModel: Identifiable {
     
     var formattedGenres: String { genres.joined(separator: ", ") }
 }
+
+extension MediaItemModel: Equatable { }

@@ -9,13 +9,15 @@
 import SwiftUI
 
 struct MainTilesListView: View {
+    @Binding var activeItem: MediaItemModel?
+    
     var mediaItems: [MediaItemModel]
     
     var body: some View {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(alignment: .center, spacing: 0) {
                     rectangleSpacer
-                    RawTilesView(mediaItems: mediaItems)
+                    RawTilesView(activeItem: $activeItem, mediaItems: mediaItems)
                     rectangleSpacer
                 }
                 .frame(

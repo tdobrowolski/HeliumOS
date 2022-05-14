@@ -31,7 +31,7 @@ struct ContentView: View {
             Spacer()
             ItemDetailsView(activeItem: viewModel.activeItem)
                 .padding([.leading, .trailing], 75.0)
-            MainTilesListView(mediaItems: viewModel.mediaItems)
+            MainTilesListView(activeItem: $viewModel.activeItem, mediaItems: viewModel.mediaItems)
         }
         .edgesIgnoringSafeArea(.all)
         .statusBar(hidden: true)

@@ -9,9 +9,15 @@
 import SwiftUI
 
 struct RawTilesView: View {
+    @Binding var activeItem: MediaItemModel?
+    
     var mediaItems: [MediaItemModel]
-
+    
     var body: some View {
-        ForEach(mediaItems) { MediaTile(mediaItem: $0) }
+        ForEach(mediaItems) {
+            MediaTile(mediaItem: $0, isActive: $0 == activeItem) {
+                activeItem = $0
+            }
+        }
     }
 }
