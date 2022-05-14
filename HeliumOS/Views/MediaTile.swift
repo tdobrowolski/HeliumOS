@@ -9,8 +9,13 @@
 import SwiftUI
 
 struct MediaTile: View {
+    enum ParentPosition {
+        case leading, center, trailing
+    }
+    
     let mediaItem: MediaItemModel
     let isActive: Bool
+    let parentPosition: ParentPosition
     
     let itemDidSelect: (MediaItemModel) -> ()
     
@@ -20,7 +25,7 @@ struct MediaTile: View {
             .aspectRatio(contentMode: .fit)
             .scaleEffect(isActive ? 1.1 : 1.0)
             .clipShape(
-                RoundedRectangle(cornerRadius: isActive ? 10.0 : 0)
+                RoundedCornersShape(corners: isActive ? .allCorners : roundedCorners, radius: 10.0)
                     .scale(isActive ? 1.1 : 1.0)
             )
             .overlay(
@@ -36,5 +41,16 @@ struct MediaTile: View {
                 UIAudioService.shared.playUISound(for: .changeSelection)
                 itemDidSelect(mediaItem)
             }
+    }
+    
+    private var roundedCorners: UIRectCorner {
+        switch parentPosition {
+        case .leading:
+            return [.topLeft, .bottomLeft]
+        case .center:
+           return []
+        case .trailing:
+            return [.topRight, .bottomRight]
+        }
     }
 }

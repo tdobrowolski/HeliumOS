@@ -16,7 +16,6 @@ enum SoundActionType: String {
 }
 
 final class UIAudioService {
-    
     static let shared = UIAudioService()
 
     private init() { }
@@ -31,8 +30,8 @@ final class UIAudioService {
         let url = URL(fileURLWithPath: soundPath)
         
         do {
-            self.soundPlayer = try AVAudioPlayer(contentsOf: url)
-            self.soundPlayer?.play()
+            soundPlayer = try AVAudioPlayer(contentsOf: url)
+            soundPlayer?.play()
         } catch {
             print("🔇 Error while playing UI sound: \(error.localizedDescription)")
         }

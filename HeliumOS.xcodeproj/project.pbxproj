@@ -27,6 +27,8 @@
 		E1AD43A4282FD5A6004BAB77 /* ItemDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AD43A3282FD5A6004BAB77 /* ItemDetailsView.swift */; };
 		E1AD43A6282FD703004BAB77 /* MenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AD43A5282FD703004BAB77 /* MenuButton.swift */; };
 		E1AD43A8282FD740004BAB77 /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AD43A7282FD740004BAB77 /* NavigationBarView.swift */; };
+		E1AD43AC282FEFA2004BAB77 /* RoundedCornersShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AD43AB282FEFA2004BAB77 /* RoundedCornersShape.swift */; };
+		E1AD43AE282FF0A8004BAB77 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AD43AD282FF0A7004BAB77 /* Array+Extensions.swift */; };
 		E1D20060244B7ECB00AC36B7 /* changeSelection.wav in Resources */ = {isa = PBXBuildFile; fileRef = E1D2005F244B7ECB00AC36B7 /* changeSelection.wav */; };
 		E1EE2E3A242AA4BD00F952CB /* LiveClockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EE2E39242AA4BD00F952CB /* LiveClockService.swift */; };
 		E1FDEBCC24310D0300E9EC63 /* UIAudioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FDEBCB24310D0300E9EC63 /* UIAudioService.swift */; };
@@ -56,6 +58,8 @@
 		E1AD43A3282FD5A6004BAB77 /* ItemDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailsView.swift; sourceTree = "<group>"; };
 		E1AD43A5282FD703004BAB77 /* MenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButton.swift; sourceTree = "<group>"; };
 		E1AD43A7282FD740004BAB77 /* NavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarView.swift; sourceTree = "<group>"; };
+		E1AD43AB282FEFA2004BAB77 /* RoundedCornersShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornersShape.swift; sourceTree = "<group>"; };
+		E1AD43AD282FF0A7004BAB77 /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 		E1D2005F244B7ECB00AC36B7 /* changeSelection.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = changeSelection.wav; sourceTree = "<group>"; };
 		E1EE2E39242AA4BD00F952CB /* LiveClockService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveClockService.swift; sourceTree = "<group>"; };
 		E1FDEBCB24310D0300E9EC63 /* UIAudioService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAudioService.swift; sourceTree = "<group>"; };
@@ -95,6 +99,7 @@
 				E190F61B242929930030B996 /* AppDelegate.swift */,
 				E190F61D242929930030B996 /* SceneDelegate.swift */,
 				E1AD439A282FD339004BAB77 /* Views */,
+				E1AD43AA282FEF97004BAB77 /* Shapes */,
 				E1FDEBD22431336200E9EC63 /* Models */,
 				E1FDEBCD2431122E00E9EC63 /* Services */,
 				E1AD4392282FCE61004BAB77 /* Extensions */,
@@ -141,6 +146,7 @@
 			children = (
 				E1AD4393282FCE72004BAB77 /* Font+Extension.swift */,
 				E1AD4398282FD1DE004BAB77 /* Color+Extension.swift */,
+				E1AD43AD282FF0A7004BAB77 /* Array+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -174,6 +180,14 @@
 				E1AD43A5282FD703004BAB77 /* MenuButton.swift */,
 			);
 			path = Buttons;
+			sourceTree = "<group>";
+		};
+		E1AD43AA282FEF97004BAB77 /* Shapes */ = {
+			isa = PBXGroup;
+			children = (
+				E1AD43AB282FEFA2004BAB77 /* RoundedCornersShape.swift */,
+			);
+			path = Shapes;
 			sourceTree = "<group>";
 		};
 		E1E7CF8824390686003FF26E /* Sounds */ = {
@@ -277,6 +291,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1AD43AC282FEFA2004BAB77 /* RoundedCornersShape.swift in Sources */,
+				E1AD43AE282FF0A8004BAB77 /* Array+Extensions.swift in Sources */,
 				E1AD43A4282FD5A6004BAB77 /* ItemDetailsView.swift in Sources */,
 				E190F61C242929930030B996 /* AppDelegate.swift in Sources */,
 				E1FDEBCC24310D0300E9EC63 /* UIAudioService.swift in Sources */,

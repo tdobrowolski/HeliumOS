@@ -15,7 +15,11 @@ struct RawTilesView: View {
     
     var body: some View {
         ForEach(mediaItems) {
-            MediaTile(mediaItem: $0, isActive: $0 == activeItem) {
+            MediaTile(
+                mediaItem: $0,
+                isActive: $0 == activeItem,
+                parentPosition: mediaItems.getParentPosition(for: $0)
+            ) {
                 activeItem = $0
             }
         }
