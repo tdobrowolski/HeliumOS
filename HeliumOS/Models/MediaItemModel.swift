@@ -9,24 +9,36 @@
 import Foundation
 
 struct MediaItemModel: Identifiable {
-    
     enum MediaType {
         case game
         case movie
         case music
         case announcement
         case event
+        
+        var actionTitle: String {
+            switch self {
+            case .game:
+                return "Launch game"
+            case .movie:
+                return "Watch movie"
+            case .music:
+                return "Stream album"
+            case .announcement, .event:
+                return "Read more"
+            }
+        }
     }
     
-    var id: String = UUID().uuidString
+    let id = UUID().uuidString
     
-    var title: String
-    var genres: [String]?
-    var mediaType: MediaType
+    let title: String
+    let genres: [String]
+    let mediaType: MediaType
     
-    var largeTitle: String?
-    var backgroundMediaPath: String?
-    var tileImagePath: String?
+    let largeTitle: String?
+    let backgroundMediaPath: String?
+    let tileImagePath: String?
     
-    var isDefault: Bool = false
+    var formattedGenres: String { genres.joined(separator: ", ") }
 }

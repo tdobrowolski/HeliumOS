@@ -10,37 +10,29 @@ import Foundation
 import Combine
 
 final class LiveClockService: ObservableObject {
-    
-    let objectWillChange = PassthroughSubject<String, Never>()
-    
+    @Published var currentTime: String = "--:--"
+
     var timer: Timer?
     
-    var currentTime: String = "" {
-        didSet {
-            objectWillChange.send(self.currentTime)
-        }
-    }
+    init() { startService() }
     
-    init() {
-        startService()
-    }
-    
-    deinit {
-        stopService()
-    }
+    deinit { stopService() }
     
     private func startService() {
-        self.updateTimeValue()
-        self.timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimeValue), userInfo: nil, repeats: true)
+        updateTimeValue()
+        timer = Timer.scheduledTimer(
+            timeInterval: 1.0,
+            target: self,
+            selector: #selector(updateTimeValue),
+            userInfo: nil,
+            repeats: true
+        )
     }
     
-    private func stopService() {
-        self.timer = nil
+    private func stopService() { timer = nil }
+    
+    @objc
+    func updateTimeValue() {
+        currentTime = DateFormatter.localizedString(from: Date(), dateStyle: .none, timeStyle: .short)
     }
-    
-    @objc func updateTimeValue() {
-        self.currentTime = DateFormatter.localizedString(from: Date(), dateStyle: .none, timeStyle: .short)
-    }
-    
-    
 }
