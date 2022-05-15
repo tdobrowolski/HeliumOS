@@ -19,7 +19,7 @@ struct ContentView: View {
     }
     
     private var backgroundView: some View {
-        BackgroundView(activeItem: viewModel.activeItem)
+        BackgroundView(activeItem: $viewModel.activeItem)
             .edgesIgnoringSafeArea(.all)
     }
     

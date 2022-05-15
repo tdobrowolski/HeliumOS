@@ -11,14 +11,29 @@ import SwiftUI
 struct MainTilesListView: View {
     @Binding var activeItem: MediaItemModel?
     
-    var mediaItems: [MediaItemModel]
+    let mediaItems: [MediaItemModel]
     
     var body: some View {
+        ScrollViewReader { proxy in
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(alignment: .center, spacing: 0) {
-                    rectangleSpacer
-                    RawTilesView(activeItem: $activeItem, mediaItems: mediaItems)
-                    rectangleSpacer
+                    Spacer(minLength: 75.0)
+                    ForEach(mediaItems) { item in
+                        MediaTile(
+                            activeItem: $activeItem,
+                            mediaItem: item,
+                            parentPosition: mediaItems.getParentPosition(for: item)
+                        )
+                            .id(item.id)
+                            .onTapGesture {
+                                UIAudioService.shared.playUISound(for: .changeSelection)
+                                activeItem = item
+                                withAnimation(.easeOut(duration: 0.3)) {
+                                    proxy.scrollTo(item.id)
+                                }
+                            }
+                    }
+                    Spacer(minLength: 75.0)
                 }
                 .frame(
                     minWidth: 0,
@@ -28,11 +43,6 @@ struct MainTilesListView: View {
                     alignment: .leading
                 )
             }
-    }
-    
-    private var rectangleSpacer: some View {
-        Rectangle()
-            .frame(width: 75.0, height: 350.0)
-            .foregroundColor(.clear)
+        }
     }
 }

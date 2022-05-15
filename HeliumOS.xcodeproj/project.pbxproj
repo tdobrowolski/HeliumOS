@@ -23,7 +23,6 @@
 		E1AD439C282FD340004BAB77 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AD439B282FD340004BAB77 /* BackgroundView.swift */; };
 		E1AD439E282FD3B8004BAB77 /* MediaTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AD439D282FD3B8004BAB77 /* MediaTile.swift */; };
 		E1AD43A0282FD41D004BAB77 /* MainTilesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AD439F282FD41D004BAB77 /* MainTilesListView.swift */; };
-		E1AD43A2282FD453004BAB77 /* RawTilesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AD43A1282FD453004BAB77 /* RawTilesView.swift */; };
 		E1AD43A4282FD5A6004BAB77 /* ItemDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AD43A3282FD5A6004BAB77 /* ItemDetailsView.swift */; };
 		E1AD43A6282FD703004BAB77 /* MenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AD43A5282FD703004BAB77 /* MenuButton.swift */; };
 		E1AD43A8282FD740004BAB77 /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AD43A7282FD740004BAB77 /* NavigationBarView.swift */; };
@@ -54,7 +53,6 @@
 		E1AD439B282FD340004BAB77 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		E1AD439D282FD3B8004BAB77 /* MediaTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaTile.swift; sourceTree = "<group>"; };
 		E1AD439F282FD41D004BAB77 /* MainTilesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTilesListView.swift; sourceTree = "<group>"; };
-		E1AD43A1282FD453004BAB77 /* RawTilesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawTilesView.swift; sourceTree = "<group>"; };
 		E1AD43A3282FD5A6004BAB77 /* ItemDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailsView.swift; sourceTree = "<group>"; };
 		E1AD43A5282FD703004BAB77 /* MenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButton.swift; sourceTree = "<group>"; };
 		E1AD43A7282FD740004BAB77 /* NavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarView.swift; sourceTree = "<group>"; };
@@ -167,7 +165,6 @@
 				E1AD439B282FD340004BAB77 /* BackgroundView.swift */,
 				E1AD439D282FD3B8004BAB77 /* MediaTile.swift */,
 				E1AD439F282FD41D004BAB77 /* MainTilesListView.swift */,
-				E1AD43A1282FD453004BAB77 /* RawTilesView.swift */,
 				E1AD43A3282FD5A6004BAB77 /* ItemDetailsView.swift */,
 				E1AD43A7282FD740004BAB77 /* NavigationBarView.swift */,
 			);
@@ -299,7 +296,6 @@
 				E1AD439E282FD3B8004BAB77 /* MediaTile.swift in Sources */,
 				E190F61E242929930030B996 /* SceneDelegate.swift in Sources */,
 				E1EE2E3A242AA4BD00F952CB /* LiveClockService.swift in Sources */,
-				E1AD43A2282FD453004BAB77 /* RawTilesView.swift in Sources */,
 				E1AD43A8282FD740004BAB77 /* NavigationBarView.swift in Sources */,
 				E1AD4394282FCE72004BAB77 /* Font+Extension.swift in Sources */,
 				E1AD43A6282FD703004BAB77 /* MenuButton.swift in Sources */,

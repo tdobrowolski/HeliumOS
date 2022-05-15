@@ -9,9 +9,7 @@
 import SwiftUI
 
 struct BackgroundView: View {
-    @State var showImageTransition = false
-    
-    let activeItem: MediaItemModel?
+    @Binding var activeItem: MediaItemModel?
     
     var gradient = Gradient(
         colors: [
@@ -38,9 +36,6 @@ struct BackgroundView: View {
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(width: geo.size.width, height: geo.size.height)
-                .scaleEffect(showImageTransition ? 1.1 : 1)
-                .opacity(showImageTransition ? 0.5 : 1)
-                .transition(.move(edge: .leading))
         }
     }
     
