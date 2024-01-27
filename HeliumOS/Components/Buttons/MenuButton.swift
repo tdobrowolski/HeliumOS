@@ -9,15 +9,18 @@
 import SwiftUI
 
 struct MenuButton: View {
-    @State var isSelected: Bool = false
+    @Binding var isSelected: Bool
     
     let item: MenuItemType
     
     var body: some View {
-        Button(action : {
+        Button {
             print("👆 \(item) button was tapped")
-        }) {
-            item.icon
+        } label: {
+            Image(systemName: item.iconName)
+                .font(.system(size: 24.0))
+                .fontWeight(.bold)
+                .symbolRenderingMode(.hierarchical)
                 .foregroundColor(isSelected ? Color.blueNeon : .white)
         }
     }

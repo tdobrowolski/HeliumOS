@@ -9,51 +9,57 @@
 import SwiftUI
 
 struct ItemDetailsView: View {
-    var activeItem: MediaItemModel?
+    var selectedItem: MediaItemModel?
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 20.0) {
+        content
+            .frame(
+                maxWidth: .infinity,
+                alignment: .leading
+            )
+    }
+    
+    private var content: some View {
+        VStack(alignment: .leading, spacing: 16.0) {
             activeItemTitle
-            HStack(spacing: 20.0) {
+            HStack(spacing: 16.0) {
                 activeItemSubtitle
                 capsuleView
                 activeItemGenresLabel
                 capsuleView
                 controllerButton
             }
-            .font(.productSansBold(size: 26.0))
         }
-        .frame(
-            maxWidth: .infinity,
-            alignment: .leading
-        )
     }
     
     private var activeItemTitle: some View {
-        Text(activeItem?.largeTitle ?? "")
-            .font(.productSansBold(size: 62.0))
+        Text(selectedItem?.heroTitle ?? "")
+            .font(.calSans(size: 62.0))
             .foregroundColor(.white)
     }
     
     private var activeItemSubtitle: some View {
-        Text(activeItem?.title ?? "")
+        Text(selectedItem?.title ?? "")
+            .font(.figtree(size: 22.0, weight: .bold))
             .foregroundColor(.white)
     }
     
     private var activeItemGenresLabel: some View {
-        Text(activeItem?.formattedGenres ?? "")
+        Text(selectedItem?.formattedGenres ?? "")
+            .font(.figtree(size: 22.0, weight: .bold))
             .foregroundColor(.white)
     }
     
     private var controllerButton: some View {
-        HStack(spacing: 10.0) {
-            Button(action: {
-                print("👆 Action button was tapped")
-            }) {
+        Button {
+            print("👆 Action button was tapped")
+        } label: {
+            HStack(spacing: 10.0) {
                 Image("controllerButtonA")
                     .resizable()
                     .frame(width: 30.0, height: 30.0)
-                Text(activeItem?.mediaType.actionTitle ?? "")
+                Text(selectedItem?.type.actionTitle ?? "")
+                    .font(.figtree(size: 22.0, weight: .bold))
                     .foregroundColor(.white)
             }
         }
@@ -62,6 +68,10 @@ struct ItemDetailsView: View {
     private var capsuleView: some View {
         Capsule()
             .foregroundColor(.yellowNeon)
-            .frame(width: 4.0, height: 20.0, alignment: .center)
+            .frame(
+                width: 4.0,
+                height: 20.0,
+                alignment: .center
+            )
     }
 }

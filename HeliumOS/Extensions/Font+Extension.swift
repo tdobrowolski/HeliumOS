@@ -9,7 +9,21 @@
 import SwiftUI
 
 extension Font {
-    public static func productSansBold(size: CGFloat) -> Font {
-        .custom("Product Sans Bold", size: size)
+    // MARK: ProductSans
+    
+    static func productSans(size: CGFloat, weight: ProductSansWeight) -> Font {
+        .custom("ProductSans-\(weight.text)", size: size)
+    }
+    
+    // MARK: Cal Sans
+    
+    static func calSans(size: CGFloat, weight: CalSansWeight = .semibold) -> Font {
+        .custom("CalSans-\(weight.text)", size: size)
+    }
+    
+    // MARK: Figtree
+    
+    static func figtree(size: CGFloat, weight: FigtreeWeight) -> Font {
+        .custom("Figtree-\(weight.text)", size: size)
     }
 }

@@ -11,7 +11,7 @@ import SwiftUI
 struct BackgroundView: View {
     @Binding var activeItem: MediaItemModel?
     
-    var gradient = Gradient(
+    private let gradient = Gradient(
         colors: [
             .init(red: 0, green: 0, blue: 0).opacity(0.3),
             .init(red: 0.04, green: 0.04, blue: 0.04).opacity(0.25),
@@ -40,6 +40,10 @@ struct BackgroundView: View {
     }
     
     var backgroundGradient: some View {
-        LinearGradient(gradient: gradient, startPoint: .top, endPoint: .bottom)
+        LinearGradient(
+            gradient: gradient,
+            startPoint: .top,
+            endPoint: .bottom
+        )
     }
 }

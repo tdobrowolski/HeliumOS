@@ -10,8 +10,8 @@ import Foundation
 import Combine
 
 final class LiveClockService: ObservableObject {
-    @Published var currentTime: String = "--:--"
-
+    var currentTime: CurrentValueSubject<String, Never> = .init(.timePlaceholder)
+    
     var timer: Timer?
     
     init() { startService() }
@@ -32,7 +32,13 @@ final class LiveClockService: ObservableObject {
     private func stopService() { timer = nil }
     
     @objc
-    func updateTimeValue() {
-        currentTime = DateFormatter.localizedString(from: Date(), dateStyle: .none, timeStyle: .short)
+    private func updateTimeValue() {
+        currentTime.send(
+            DateFormatter.localizedString(
+                from: Date(),
+                dateStyle: .none,
+                timeStyle: .short
+            )
+        )
     }
 }

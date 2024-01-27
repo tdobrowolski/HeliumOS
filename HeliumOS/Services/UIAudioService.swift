@@ -23,17 +23,17 @@ final class UIAudioService {
     var soundPlayer: AVAudioPlayer?
     
     func playUISound(for soundType: SoundActionType) {
-        guard let soundPath = Bundle.main.path(forResource: soundType.rawValue, ofType: nil) else {
-            print("🔇 Can't find path for UI sound.")
-            return
-        }
-        let url = URL(fileURLWithPath: soundPath)
-        
-        do {
-            soundPlayer = try AVAudioPlayer(contentsOf: url)
-            soundPlayer?.play()
-        } catch {
-            print("🔇 Error while playing UI sound: \(error.localizedDescription)")
-        }
+//        guard let soundPath = Bundle.main.path(forResource: soundType.rawValue, ofType: nil) else {
+//            return print("🔇 Can't find path for UI sound.")
+//        }
+//        
+//        let url = URL(fileURLWithPath: soundPath)
+//        
+//        do {
+//            soundPlayer = try AVAudioPlayer(contentsOf: url)
+//            soundPlayer?.play()
+//        } catch {
+//            print("🔇 Error while playing UI sound: \(error.localizedDescription)")
+//        }
     }
 }
