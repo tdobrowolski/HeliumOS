@@ -8,8 +8,8 @@
 
 import SwiftUI
 
+// FIXME: Fix contentMargins not tappable.
 struct MainTilesListView: View {
-    
     @Binding var activeItem: MediaItemModel?
     
     let mediaItems: [MediaItemModel]
@@ -22,9 +22,8 @@ struct MainTilesListView: View {
         ScrollViewReader { proxy in
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(alignment: .center, spacing: 0.0) {
-                    Spacer(minLength: MainLayoutConstants.safeAreaPadding)
                     ForEach(mediaItems) { item in
-                        MediaTile(
+                        MediaTileView(
                             isActive: .init(
                                 get: { activeItem == item },
                                 set: { _ in }
@@ -35,10 +34,10 @@ struct MainTilesListView: View {
                         .id(item.id)
                         .onTapGesture { itemDidTap(item, proxy: proxy) }
                     }
-                    Spacer(minLength: MainLayoutConstants.safeAreaPadding)
                 }
             }
             .scrollClipDisabled()
+            .contentMargins(.horizontal, MainLayoutConstants.safeAreaPadding, for: .scrollContent)
         }
     }
     
@@ -46,11 +45,7 @@ struct MainTilesListView: View {
         UIAudioService.shared.playUISound(for: .changeSelection)
         activeItem = item
         withAnimation(.easeOut(duration: 0.3)) {
-            proxy.scrollTo(item.id)
+            proxy.scrollTo(item.id, anchor: .leading)
         }
     }
-}
-
-enum MainLayoutConstants {
-    static var safeAreaPadding: CGFloat { 60.0 }
 }

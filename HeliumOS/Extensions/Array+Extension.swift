@@ -7,7 +7,7 @@
 //
 
 extension Array where Element == MediaItemModel {
-    func getParentPosition(for item: MediaItemModel) -> MediaTile.ParentPosition {
+    func getParentPosition(for item: MediaItemModel) -> MediaTileView.ParentPosition {
         switch firstIndex(where: { $0 == item }) {
         case startIndex: return .leading
         case endIndex - 1: return .trailing

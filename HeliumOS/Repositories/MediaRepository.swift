@@ -33,7 +33,7 @@ struct MediaRepository {
                 GameMediaItemModel(
                     title: "Resident Evil 3",
                     genreTypes: [.horror, .survival],
-                    heroTitle: "Fight your way to freedom",
+                    heroTitle: "Fight your way to the freedom",
                     backgroundMediaPath: "ResidentEvil3Large",
                     tileImagePath: "ResidentEvil3Square"
                 ).asMediaItemModel,
@@ -47,7 +47,7 @@ struct MediaRepository {
                 MovieMediaItemModel(
                     title: "Jurassic World: Fallen Kingdom",
                     genreTypes: [.scifi, .action],
-                    heroTitle: "Welcome to Jurassic Park",
+                    heroTitle: "Welcome to the Jurassic Park",
                     backgroundMediaPath: "JurassicWorldFallenKingdomLarge",
                     tileImagePath: "JurassicWorldFallenKingdomSquare"
                 ).asMediaItemModel,

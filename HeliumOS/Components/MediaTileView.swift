@@ -1,5 +1,5 @@
 //
-//  MediaTile.swift
+//  MediaTileView.swift
 //  HeliumOS
 //
 //  Created by Tobiasz Dobrowolski on 14/05/2022.
@@ -8,9 +8,19 @@
 
 import SwiftUI
 
-struct MediaTile: View {
+struct MediaTileView: View {
     enum ParentPosition {
-        case leading, center, trailing
+        case leading
+        case center
+        case trailing
+        
+        var roundedCorners: UIRectCorner {
+            switch self {
+            case .leading: return [.topLeft, .bottomLeft]
+            case .center: return []
+            case .trailing: return [.topRight, .bottomRight]
+            }
+        }
     }
     
     @Binding var isActive: Bool
@@ -33,7 +43,7 @@ struct MediaTile: View {
             .aspectRatio(contentMode: .fit)
             .clipShape(
                 RoundedCornersShape(
-                    corners: isActive ? .allCorners : roundedCorners,
+                    corners: isActive ? .allCorners : parentPosition.roundedCorners,
                     radius: 10.0
                 )
             )
@@ -54,13 +64,5 @@ struct MediaTile: View {
                 x: 0,
                 y: 0
             )
-    }
-    
-    private var roundedCorners: UIRectCorner {
-        switch parentPosition {
-        case .leading: return [.topLeft, .bottomLeft]
-        case .center: return []
-        case .trailing: return [.topRight, .bottomRight]
-        }
     }
 }

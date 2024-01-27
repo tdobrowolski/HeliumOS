@@ -22,6 +22,7 @@ final class UIAudioService {
     
     var soundPlayer: AVAudioPlayer?
     
+    // FIXME: Disabled for now. Fix UI freeze on play action.
     func playUISound(for soundType: SoundActionType) {
 //        guard let soundPath = Bundle.main.path(forResource: soundType.rawValue, ofType: nil) else {
 //            return print("🔇 Can't find path for UI sound.")
