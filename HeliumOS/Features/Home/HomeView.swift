@@ -19,7 +19,10 @@ struct HomeView: View {
     }
     
     private var backgroundView: some View {
-        BackgroundView(activeItem: $viewModel.selectedItem)
+        BackgroundView(
+            activeItem: $viewModel.selectedItem,
+            items: $viewModel.mediaItems
+        )
             .edgesIgnoringSafeArea(.all)
     }
     
@@ -36,6 +39,7 @@ struct HomeView: View {
         .statusBar(hidden: true)
     }
     
+    // FIXME: Fix icons jumping up when Dua Lipa
     private var navigationBar: some View {
         NavigationBarView(
             currentTime: $viewModel.currentTime, 
@@ -55,7 +59,7 @@ struct HomeView: View {
     private var itemsList: some View {
         MainTilesListView(
             activeItem: $viewModel.selectedItem,
-            mediaItems: viewModel.mediaItems
+            mediaItems: $viewModel.mediaItems
         )
         .padding(.bottom, MainLayoutConstants.safeAreaPadding)
     }

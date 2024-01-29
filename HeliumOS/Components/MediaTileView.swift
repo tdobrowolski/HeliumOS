@@ -30,6 +30,7 @@ struct MediaTileView: View {
     
     var body: some View {
         content
+            .background { backgroundGlow }
             .scaleEffect(isActive ? 1.1 : 1.0)
             .animation(
                 .easeOut(duration: 0.3),
@@ -41,12 +42,7 @@ struct MediaTileView: View {
         Image(mediaItem.tileImagePath ?? "")
             .resizable()
             .aspectRatio(contentMode: .fit)
-            .clipShape(
-                RoundedCornersShape(
-                    corners: isActive ? .allCorners : parentPosition.roundedCorners,
-                    radius: 10.0
-                )
-            )
+            .clipShape(roundedClipShape)
             .overlay(roundedOverlay)
             .zIndex(isActive ? 1 : -1)
             .frame(width: 280.0, height: 280.0)
@@ -64,5 +60,25 @@ struct MediaTileView: View {
                 x: 0,
                 y: 0
             )
+    }
+    
+    @ViewBuilder
+    private var backgroundGlow: some View {
+        if let imageName = mediaItem.tileImagePath {
+            Image(imageName)
+                .resizable()
+                .scaledToFit()
+                .clipShape(roundedClipShape)
+                .blur(radius: 18.0)
+                .opacity(0.4)
+                .offset(y: 2.0)
+        }
+    }
+    
+    private var roundedClipShape: some Shape {
+        RoundedCornersShape(
+            corners: isActive ? .allCorners : parentPosition.roundedCorners,
+            radius: 10.0
+        )
     }
 }

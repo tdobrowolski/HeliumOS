@@ -55,7 +55,7 @@ struct ItemDetailsView: View {
             print("👆 Action button was tapped")
         } label: {
             HStack(spacing: 10.0) {
-                Image("controllerButtonA")
+                Image(.controllerButtonA)
                     .resizable()
                     .frame(width: 30.0, height: 30.0)
                 Text(selectedItem?.type.actionTitle ?? "")

@@ -11,17 +11,26 @@ import SwiftUI
 struct MenuButton: View {
     @Binding var isSelected: Bool
     
+    // TODO: Listen for isActive, remove tapToggle
+    @State private var tapToggle = false
+    
     let item: MenuItemType
     
     var body: some View {
         Button {
             print("👆 \(item) button was tapped")
+            tapToggle.toggle()
         } label: {
             Image(systemName: item.iconName)
                 .font(.system(size: 24.0))
                 .fontWeight(.bold)
                 .symbolRenderingMode(.hierarchical)
-                .foregroundColor(isSelected ? Color.blueNeon : .white)
+                .symbolEffect(
+                    .bounce.down,
+                    options: .speed(1.3),
+                    value: tapToggle
+                )
+                .foregroundColor(isSelected ? .blueNeon : .white)
         }
     }
 }

@@ -20,6 +20,7 @@
 		E187BCA32B65AE63007F989F /* Figtree-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E187BC8A2B65AB57007F989F /* Figtree-Bold.ttf */; };
 		E187BCA42B65AE63007F989F /* Figtree-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E187BC8B2B65AB57007F989F /* Figtree-Semibold.ttf */; };
 		E187BCA62B65BC18007F989F /* MainLayoutConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E187BCA52B65BC18007F989F /* MainLayoutConstants.swift */; };
+		E187BCA92B66DBDD007F989F /* XAxisMoveModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E187BCA82B66DBDD007F989F /* XAxisMoveModifier.swift */; };
 		E190F61C242929930030B996 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E190F61B242929930030B996 /* AppDelegate.swift */; };
 		E190F61E242929930030B996 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E190F61D242929930030B996 /* SceneDelegate.swift */; };
 		E190F622242929940030B996 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E190F621242929940030B996 /* Assets.xcassets */; };
@@ -29,7 +30,6 @@
 		E190F63724293D470030B996 /* ProductSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E190F63324293D470030B996 /* ProductSans-Regular.ttf */; };
 		E1AD4394282FCE72004BAB77 /* Font+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AD4393282FCE72004BAB77 /* Font+Extension.swift */; };
 		E1AD4397282FD0F0004BAB77 /* MenuItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AD4396282FD0F0004BAB77 /* MenuItemType.swift */; };
-		E1AD4399282FD1DE004BAB77 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AD4398282FD1DE004BAB77 /* Color+Extension.swift */; };
 		E1AD439C282FD340004BAB77 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AD439B282FD340004BAB77 /* BackgroundView.swift */; };
 		E1AD439E282FD3B8004BAB77 /* MediaTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AD439D282FD3B8004BAB77 /* MediaTileView.swift */; };
 		E1AD43A0282FD41D004BAB77 /* MainTilesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AD439F282FD41D004BAB77 /* MainTilesListView.swift */; };
@@ -66,6 +66,7 @@
 		E187BC9A2B65AC1B007F989F /* ProductSansWeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSansWeight.swift; sourceTree = "<group>"; };
 		E187BC9C2B65AC21007F989F /* CalSansWeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalSansWeight.swift; sourceTree = "<group>"; };
 		E187BCA52B65BC18007F989F /* MainLayoutConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainLayoutConstants.swift; sourceTree = "<group>"; };
+		E187BCA82B66DBDD007F989F /* XAxisMoveModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XAxisMoveModifier.swift; sourceTree = "<group>"; };
 		E190F618242929930030B996 /* HeliumOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeliumOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E190F61B242929930030B996 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E190F61D242929930030B996 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,7 +78,6 @@
 		E190F63324293D470030B996 /* ProductSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProductSans-Regular.ttf"; sourceTree = "<group>"; };
 		E1AD4393282FCE72004BAB77 /* Font+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extension.swift"; sourceTree = "<group>"; };
 		E1AD4396282FD0F0004BAB77 /* MenuItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemType.swift; sourceTree = "<group>"; };
-		E1AD4398282FD1DE004BAB77 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		E1AD439B282FD340004BAB77 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		E1AD439D282FD3B8004BAB77 /* MediaTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaTileView.swift; sourceTree = "<group>"; };
 		E1AD439F282FD41D004BAB77 /* MainTilesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTilesListView.swift; sourceTree = "<group>"; };
@@ -131,6 +131,14 @@
 			path = Genres;
 			sourceTree = "<group>";
 		};
+		E187BCAA2B66EFB4007F989F /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				E187BCA82B66DBDD007F989F /* XAxisMoveModifier.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
 		E190F60F242929930030B996 = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +168,7 @@
 				E1FDEBCD2431122E00E9EC63 /* Services */,
 				E1AD43AA282FEF97004BAB77 /* Shapes */,
 				E1AD4392282FCE61004BAB77 /* Extensions */,
+				E187BCAA2B66EFB4007F989F /* Modifiers */,
 				E1AD4391282FCCA5004BAB77 /* Resources */,
 				E190F621242929940030B996 /* Assets.xcassets */,
 				E190F626242929940030B996 /* LaunchScreen.storyboard */,
@@ -207,7 +216,6 @@
 			isa = PBXGroup;
 			children = (
 				E1AD4393282FCE72004BAB77 /* Font+Extension.swift */,
-				E1AD4398282FD1DE004BAB77 /* Color+Extension.swift */,
 				E1AD43AD282FF0A7004BAB77 /* Array+Extension.swift */,
 				E1B9E3C32B65712D00163EDD /* String+Extension.swift */,
 			);
@@ -388,6 +396,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E187BCA92B66DBDD007F989F /* XAxisMoveModifier.swift in Sources */,
 				E1B9E3D12B65801500163EDD /* MediaRepository.swift in Sources */,
 				E1AD43AC282FEFA2004BAB77 /* RoundedCornersShape.swift in Sources */,
 				E1AD43AE282FF0A8004BAB77 /* Array+Extension.swift in Sources */,
@@ -414,7 +423,6 @@
 				E1AD4397282FD0F0004BAB77 /* MenuItemType.swift in Sources */,
 				E1FDEBD12431335D00E9EC63 /* MediaItemModel.swift in Sources */,
 				E187BC6C2B658CB6007F989F /* LiveClockService.swift in Sources */,
-				E1AD4399282FD1DE004BAB77 /* Color+Extension.swift in Sources */,
 				E187BC992B65AC14007F989F /* FigtreeWeight.swift in Sources */,
 				E1B9E3C02B656CEF00163EDD /* HomeViewModel.swift in Sources */,
 			);
@@ -552,6 +560,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"HeliumOS/Preview Content\"";
 				DEVELOPMENT_TEAM = V9858W9DAL;
@@ -573,6 +582,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"HeliumOS/Preview Content\"";
 				DEVELOPMENT_TEAM = V9858W9DAL;

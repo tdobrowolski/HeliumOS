@@ -11,8 +11,7 @@ import SwiftUI
 // FIXME: Fix contentMargins not tappable.
 struct MainTilesListView: View {
     @Binding var activeItem: MediaItemModel?
-    
-    let mediaItems: [MediaItemModel]
+    @Binding var mediaItems: [MediaItemModel]
     
     var body: some View {
         content
@@ -48,4 +47,16 @@ struct MainTilesListView: View {
             proxy.scrollTo(item.id, anchor: .leading)
         }
     }
+}
+
+#Preview {
+    @State var mediaRepository = MediaRepository()
+    
+    return MainTilesListView(
+        activeItem: .constant(nil),
+        mediaItems: .init(
+            get: { mediaRepository.mainMediaItems.value },
+            set: { _ in }
+        )
+    )
 }

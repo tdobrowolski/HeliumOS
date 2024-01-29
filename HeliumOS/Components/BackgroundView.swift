@@ -8,8 +8,10 @@
 
 import SwiftUI
 
-struct BackgroundView: View {
+struct BackgroundView: View {    
     @Binding var activeItem: MediaItemModel?
+    @Binding var items: [MediaItemModel]
+    @State private var transitionDirection: XAxisTransitionDirection?
     
     private let gradient = Gradient(
         colors: [
@@ -26,17 +28,51 @@ struct BackgroundView: View {
     var body: some View {
         ZStack(alignment: .center) {
             backgroundImage
+                .id(UUID())
+                .animation(
+                    .easeOut(duration: 0.5),
+                    value: transitionDirection?.id
+                )
+                .transition(
+                    transitionDirection?.transition ?? .identity
+                )
             backgroundGradient
+        }
+        .background {
+            if let _ = activeItem?.backgroundMediaPath {
+                backgroundImage
+                    .blur(radius: 8.0)
+                    .scaleEffect(1.1)
+            } else {
+                Color.black
+            }
+        }
+        .onChange(of: activeItem) { oldValue, newValue in
+            guard let oldValue,
+                  let newValue,
+                  let oldValueIndex = items.firstIndex(of: oldValue),
+                  let newValueIndex = items.firstIndex(of: newValue) else {
+                return
+            }
+            
+            switch (oldValueIndex, newValueIndex) {
+            case let (old, new) where old < new:
+                transitionDirection = .right
+                
+            case let (old, new) where old > new:
+                transitionDirection = .left
+                
+            default:
+                return
+            }
         }
     }
     
     var backgroundImage: some View {
-        GeometryReader { geo in
-            Image(activeItem?.backgroundMediaPath ?? "")
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(width: geo.size.width, height: geo.size.height)
-        }
+        Image(activeItem?.backgroundMediaPath ?? "")
+            .resizable()
+            .scaledToFill()
+            .containerRelativeFrame(.horizontal)
     }
     
     var backgroundGradient: some View {
