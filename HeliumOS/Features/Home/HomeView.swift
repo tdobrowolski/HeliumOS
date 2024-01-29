@@ -12,18 +12,8 @@ struct HomeView: View {
     @ObservedObject var viewModel: HomeViewModel
     
     var body: some View {
-        ZStack {
-            backgroundView
-            mainContentView
-        }
-    }
-    
-    private var backgroundView: some View {
-        BackgroundView(
-            activeItem: $viewModel.selectedItem,
-            items: $viewModel.mediaItems
-        )
-            .edgesIgnoringSafeArea(.all)
+        mainContentView
+            .background { backgroundView }
     }
     
     private var mainContentView: some View {
@@ -39,16 +29,23 @@ struct HomeView: View {
         .statusBar(hidden: true)
     }
     
-    // FIXME: Fix icons jumping up when Dua Lipa
     private var navigationBar: some View {
-        NavigationBarView(
-            currentTime: $viewModel.currentTime, 
+        NavigationView(
+            currentTime: $viewModel.currentTime,
             selectedMenuItem: $viewModel.selectedMenuItem
         )
         .padding(
             [.leading, .top, .trailing],
             MainLayoutConstants.safeAreaPadding
         )
+    }
+    
+    private var backgroundView: some View {
+        BackgroundView(
+            activeItem: $viewModel.selectedItem,
+            items: $viewModel.mediaItems
+        )
+        .edgesIgnoringSafeArea(.all)
     }
     
     private var selectedItemDetails: some View {

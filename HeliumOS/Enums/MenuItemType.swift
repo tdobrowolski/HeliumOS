@@ -41,6 +41,13 @@ enum MenuItemType {
         case .profile: return "person.crop.circle.fill"
         }
     }
+    
+    var symbolRenderingMode: SymbolRenderingMode {
+        switch self {
+        case .games: return .monochrome
+        default: return .hierarchical
+        }
+    }
 }
 
 extension MenuItemType: Identifiable, CaseIterable  {

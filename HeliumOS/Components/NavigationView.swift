@@ -1,5 +1,5 @@
 //
-//  NavigationBarView.swift
+//  NavigationView.swift
 //  HeliumOS
 //
 //  Created by Tobiasz Dobrowolski on 14/05/2022.
@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct NavigationBarView: View {
+struct NavigationView: View {
     @Binding var currentTime: String
     @Binding var selectedMenuItem: MenuItemType
     
@@ -19,8 +19,10 @@ struct NavigationBarView: View {
     var content: some View {
         HStack {
             mainButtons
+                .shadow(color: .black.opacity(0.6), radius: 16.0)
             Spacer()
             secondaryItems
+                .shadow(color: .black.opacity(0.6), radius: 16.0)
         }
     }
     
@@ -30,7 +32,7 @@ struct NavigationBarView: View {
                 MenuButton(
                     isSelected: .init(
                         get: { selectedMenuItem == item },
-                        set: { _ in }
+                        set: { if $0 { selectedMenuItem = item } }
                     ),
                     item: item
                 )
@@ -61,7 +63,7 @@ struct NavigationBarView: View {
     
     #warning("Deprecated solution.")
     private var avatarIndicator: some View {
-        Image("avatar")
+        Image(.avatar)
             .resizable()
             .frame(width: 60.0, height: 60.0)
             .overlay(
@@ -74,5 +76,16 @@ struct NavigationBarView: View {
                         y: 0
                     )
             )
+    }
+}
+
+#Preview {
+    ZStack {
+        Color.black.ignoresSafeArea()
+        NavigationView(
+            currentTime: .constant("21:37"),
+            selectedMenuItem: .constant(.home)
+        )
+        .padding(40.0)
     }
 }

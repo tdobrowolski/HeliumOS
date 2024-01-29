@@ -35,7 +35,7 @@
 		E1AD43A0282FD41D004BAB77 /* MainTilesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AD439F282FD41D004BAB77 /* MainTilesListView.swift */; };
 		E1AD43A4282FD5A6004BAB77 /* ItemDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AD43A3282FD5A6004BAB77 /* ItemDetailsView.swift */; };
 		E1AD43A6282FD703004BAB77 /* MenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AD43A5282FD703004BAB77 /* MenuButton.swift */; };
-		E1AD43A8282FD740004BAB77 /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AD43A7282FD740004BAB77 /* NavigationBarView.swift */; };
+		E1AD43A8282FD740004BAB77 /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AD43A7282FD740004BAB77 /* NavigationView.swift */; };
 		E1AD43AC282FEFA2004BAB77 /* RoundedCornersShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AD43AB282FEFA2004BAB77 /* RoundedCornersShape.swift */; };
 		E1AD43AE282FF0A8004BAB77 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AD43AD282FF0A7004BAB77 /* Array+Extension.swift */; };
 		E1B9E3C02B656CEF00163EDD /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B9E3BF2B656CEF00163EDD /* HomeViewModel.swift */; };
@@ -48,6 +48,8 @@
 		E1B9E3D12B65801500163EDD /* MediaRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B9E3D02B65801500163EDD /* MediaRepository.swift */; };
 		E1B9E3D32B6580A500163EDD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B9E3D22B6580A500163EDD /* HomeView.swift */; };
 		E1D20060244B7ECB00AC36B7 /* changeSelection.wav in Resources */ = {isa = PBXBuildFile; fileRef = E1D2005F244B7ECB00AC36B7 /* changeSelection.wav */; };
+		E1E5FEE52B684EA800F1F8D6 /* ControllerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E5FEE42B684EA800F1F8D6 /* ControllerButton.swift */; };
+		E1E5FEE72B684F4900F1F8D6 /* ControllerButtonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E5FEE62B684F4900F1F8D6 /* ControllerButtonType.swift */; };
 		E1FDEBCC24310D0300E9EC63 /* UIAudioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FDEBCB24310D0300E9EC63 /* UIAudioService.swift */; };
 		E1FDEBD12431335D00E9EC63 /* MediaItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FDEBD02431335D00E9EC63 /* MediaItemModel.swift */; };
 /* End PBXBuildFile section */
@@ -83,7 +85,7 @@
 		E1AD439F282FD41D004BAB77 /* MainTilesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTilesListView.swift; sourceTree = "<group>"; };
 		E1AD43A3282FD5A6004BAB77 /* ItemDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailsView.swift; sourceTree = "<group>"; };
 		E1AD43A5282FD703004BAB77 /* MenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButton.swift; sourceTree = "<group>"; };
-		E1AD43A7282FD740004BAB77 /* NavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarView.swift; sourceTree = "<group>"; };
+		E1AD43A7282FD740004BAB77 /* NavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationView.swift; sourceTree = "<group>"; };
 		E1AD43AB282FEFA2004BAB77 /* RoundedCornersShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornersShape.swift; sourceTree = "<group>"; };
 		E1AD43AD282FF0A7004BAB77 /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		E1B9E3BF2B656CEF00163EDD /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -96,6 +98,8 @@
 		E1B9E3D02B65801500163EDD /* MediaRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaRepository.swift; sourceTree = "<group>"; };
 		E1B9E3D22B6580A500163EDD /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		E1D2005F244B7ECB00AC36B7 /* changeSelection.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = changeSelection.wav; sourceTree = "<group>"; };
+		E1E5FEE42B684EA800F1F8D6 /* ControllerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerButton.swift; sourceTree = "<group>"; };
+		E1E5FEE62B684F4900F1F8D6 /* ControllerButtonType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerButtonType.swift; sourceTree = "<group>"; };
 		E1FDEBCB24310D0300E9EC63 /* UIAudioService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAudioService.swift; sourceTree = "<group>"; };
 		E1FDEBD02431335D00E9EC63 /* MediaItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaItemModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -229,6 +233,7 @@
 				E187BCA72B65BC7F007F989F /* Genres */,
 				E1AD4396282FD0F0004BAB77 /* MenuItemType.swift */,
 				E1B9E3CB2B65771600163EDD /* MediaType.swift */,
+				E1E5FEE62B684F4900F1F8D6 /* ControllerButtonType.swift */,
 				E187BCA52B65BC18007F989F /* MainLayoutConstants.swift */,
 			);
 			path = Enums;
@@ -242,7 +247,7 @@
 				E1AD439D282FD3B8004BAB77 /* MediaTileView.swift */,
 				E1AD439F282FD41D004BAB77 /* MainTilesListView.swift */,
 				E1AD43A3282FD5A6004BAB77 /* ItemDetailsView.swift */,
-				E1AD43A7282FD740004BAB77 /* NavigationBarView.swift */,
+				E1AD43A7282FD740004BAB77 /* NavigationView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -251,6 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				E1AD43A5282FD703004BAB77 /* MenuButton.swift */,
+				E1E5FEE42B684EA800F1F8D6 /* ControllerButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -412,9 +418,11 @@
 				E1FDEBCC24310D0300E9EC63 /* UIAudioService.swift in Sources */,
 				E1AD439E282FD3B8004BAB77 /* MediaTileView.swift in Sources */,
 				E190F61E242929930030B996 /* SceneDelegate.swift in Sources */,
-				E1AD43A8282FD740004BAB77 /* NavigationBarView.swift in Sources */,
+				E1E5FEE72B684F4900F1F8D6 /* ControllerButtonType.swift in Sources */,
+				E1AD43A8282FD740004BAB77 /* NavigationView.swift in Sources */,
 				E1AD4394282FCE72004BAB77 /* Font+Extension.swift in Sources */,
 				E1AD43A6282FD703004BAB77 /* MenuButton.swift in Sources */,
+				E1E5FEE52B684EA800F1F8D6 /* ControllerButton.swift in Sources */,
 				E1AD43A0282FD41D004BAB77 /* MainTilesListView.swift in Sources */,
 				E1AD439C282FD340004BAB77 /* BackgroundView.swift in Sources */,
 				E1B9E3C82B6576E800163EDD /* MusicGenreType.swift in Sources */,

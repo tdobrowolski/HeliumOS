@@ -51,17 +51,11 @@ struct ItemDetailsView: View {
     }
     
     private var controllerButton: some View {
-        Button {
-            print("👆 Action button was tapped")
-        } label: {
-            HStack(spacing: 10.0) {
-                Image(.controllerButtonA)
-                    .resizable()
-                    .frame(width: 30.0, height: 30.0)
-                Text(selectedItem?.type.actionTitle ?? "")
-                    .font(.figtree(size: 22.0, weight: .bold))
-                    .foregroundColor(.white)
-            }
+        ControllerButton(
+            buttonType: .aButton,
+            text: selectedItem?.type.actionTitle
+        ) {
+            // TODO: Add action
         }
     }
     

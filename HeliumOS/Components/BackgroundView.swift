@@ -28,7 +28,6 @@ struct BackgroundView: View {
     var body: some View {
         ZStack(alignment: .center) {
             backgroundImage
-                .id(UUID())
                 .animation(
                     .easeOut(duration: 0.5),
                     value: transitionDirection?.id
@@ -72,6 +71,7 @@ struct BackgroundView: View {
         Image(activeItem?.backgroundMediaPath ?? "")
             .resizable()
             .scaledToFill()
+            .id(transitionDirection?.id)
             .containerRelativeFrame(.horizontal)
     }
     

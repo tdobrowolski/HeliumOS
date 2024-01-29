@@ -16,7 +16,6 @@ final class HomeViewModel: ObservableObject {
     @Published var selectedMenuItem: MenuItemType = .home
     
     let mediaRepository = MediaRepository()
-    
     let clockService = LiveClockService()
     
     init() {
