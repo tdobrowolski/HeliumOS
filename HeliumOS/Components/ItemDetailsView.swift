@@ -57,6 +57,7 @@ struct ItemDetailsView: View {
         ) {
             // TODO: Add action
         }
+        .buttonStyle(ControllerButtonStyle())
     }
     
     private var capsuleView: some View {

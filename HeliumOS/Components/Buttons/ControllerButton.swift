@@ -8,22 +8,17 @@
 
 import SwiftUI
 
-// TODO: Redesign, looks plain now
-// TODO: Add isPressed effect in ButtonStyle
 struct ControllerButton: View {
     let buttonType: ControllerButtonType
     let text: String?
     let onTap: (() -> Void)?
-    
-    @State private var animationHelper = false
-    
+        
     var body: some View {
         content
     }
     
     private var content: some View {
         Button {
-            animationHelper.toggle()
             onTap?()
         } label: {
             HStack(spacing: 10.0) {
@@ -35,10 +30,14 @@ struct ControllerButton: View {
     
     private var icon: some View {
         Image(systemName: buttonType.iconName)
-            .font(.system(size: 30.0))
+            .font(.system(size: 28.0))
             .fontWeight(.bold)
-            .symbolRenderingMode(.multicolor)
+            .symbolRenderingMode(.hierarchical)
             .foregroundColor(buttonType.iconColor)
+            .background {
+                Circle()
+                    .fill(Color.white.opacity(0.9))
+            }
     }
     
     @ViewBuilder
@@ -66,5 +65,6 @@ struct ControllerButton: View {
         Color.black
             .ignoresSafeArea()
         ControllerButton(buttonType: .aButton, text: "Launch game")
+            .buttonStyle(ControllerButtonStyle())
     }
 }

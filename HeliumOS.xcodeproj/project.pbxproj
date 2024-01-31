@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E17CBE792B6AB9DA002A7253 /* ControllerButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17CBE782B6AB9DA002A7253 /* ControllerButtonStyle.swift */; };
 		E187BC6C2B658CB6007F989F /* LiveClockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E187BC6B2B658CB6007F989F /* LiveClockService.swift */; };
 		E187BC702B65A7ED007F989F /* CalSans-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = E187BC6F2B65A7ED007F989F /* CalSans-Semibold.otf */; };
 		E187BC992B65AC14007F989F /* FigtreeWeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = E187BC982B65AC14007F989F /* FigtreeWeight.swift */; };
@@ -55,6 +56,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E17CBE782B6AB9DA002A7253 /* ControllerButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerButtonStyle.swift; sourceTree = "<group>"; };
 		E187BC6B2B658CB6007F989F /* LiveClockService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveClockService.swift; sourceTree = "<group>"; };
 		E187BC6F2B65A7ED007F989F /* CalSans-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CalSans-Semibold.otf"; sourceTree = "<group>"; };
 		E187BC892B65AB56007F989F /* Figtree-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Figtree-Medium.ttf"; sourceTree = "<group>"; };
@@ -115,6 +117,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E17CBE772B6AB9CC002A7253 /* ButtonStyles */ = {
+			isa = PBXGroup;
+			children = (
+				E17CBE782B6AB9DA002A7253 /* ControllerButtonStyle.swift */,
+			);
+			path = ButtonStyles;
+			sourceTree = "<group>";
+		};
 		E187BC972B65AC00007F989F /* CustomFontWeightTypes */ = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +148,7 @@
 		E187BCAA2B66EFB4007F989F /* Modifiers */ = {
 			isa = PBXGroup;
 			children = (
+				E17CBE772B6AB9CC002A7253 /* ButtonStyles */,
 				E187BCA82B66DBDD007F989F /* XAxisMoveModifier.swift */,
 			);
 			path = Modifiers;
@@ -409,6 +420,7 @@
 				E1B9E3D32B6580A500163EDD /* HomeView.swift in Sources */,
 				E1B9E3CA2B6576EF00163EDD /* MovieGenreType.swift in Sources */,
 				E1AD43A4282FD5A6004BAB77 /* ItemDetailsView.swift in Sources */,
+				E17CBE792B6AB9DA002A7253 /* ControllerButtonStyle.swift in Sources */,
 				E1B9E3C62B6576D800163EDD /* GameGenreType.swift in Sources */,
 				E187BC9D2B65AC21007F989F /* CalSansWeight.swift in Sources */,
 				E1B9E3C42B65712D00163EDD /* String+Extension.swift in Sources */,
