@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		56E6A3CA2B72E7F900C86E09 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E6A3C92B72E7F900C86E09 /* VideoView.swift */; };
+		56E6A3CD2B72EB7900C86E09 /* test.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 56E6A3CC2B72EB7900C86E09 /* test.mp4 */; };
 		E17CBE792B6AB9DA002A7253 /* ControllerButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17CBE782B6AB9DA002A7253 /* ControllerButtonStyle.swift */; };
 		E187BC6C2B658CB6007F989F /* LiveClockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E187BC6B2B658CB6007F989F /* LiveClockService.swift */; };
 		E187BC702B65A7ED007F989F /* CalSans-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = E187BC6F2B65A7ED007F989F /* CalSans-Semibold.otf */; };
@@ -56,6 +58,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		56E6A3C92B72E7F900C86E09 /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
+		56E6A3CC2B72EB7900C86E09 /* test.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.mp4; sourceTree = "<group>"; };
 		E17CBE782B6AB9DA002A7253 /* ControllerButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerButtonStyle.swift; sourceTree = "<group>"; };
 		E187BC6B2B658CB6007F989F /* LiveClockService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveClockService.swift; sourceTree = "<group>"; };
 		E187BC6F2B65A7ED007F989F /* CalSans-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CalSans-Semibold.otf"; sourceTree = "<group>"; };
@@ -117,6 +121,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		56E6A3CB2B72EB6400C86E09 /* Videos */ = {
+			isa = PBXGroup;
+			children = (
+				56E6A3CC2B72EB7900C86E09 /* test.mp4 */,
+			);
+			path = Videos;
+			sourceTree = "<group>";
+		};
 		E17CBE772B6AB9CC002A7253 /* ButtonStyles */ = {
 			isa = PBXGroup;
 			children = (
@@ -221,6 +233,7 @@
 		E1AD4391282FCCA5004BAB77 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				56E6A3CB2B72EB6400C86E09 /* Videos */,
 				E1E7CF8824390686003FF26E /* Sounds */,
 				E190F62F24293CE70030B996 /* Fonts */,
 			);
@@ -259,6 +272,7 @@
 				E1AD439F282FD41D004BAB77 /* MainTilesListView.swift */,
 				E1AD43A3282FD5A6004BAB77 /* ItemDetailsView.swift */,
 				E1AD43A7282FD740004BAB77 /* NavigationView.swift */,
+				56E6A3C92B72E7F900C86E09 /* VideoView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -402,6 +416,7 @@
 				E1D20060244B7ECB00AC36B7 /* changeSelection.wav in Resources */,
 				E190F625242929940030B996 /* Preview Assets.xcassets in Resources */,
 				E187BCA42B65AE63007F989F /* Figtree-Semibold.ttf in Resources */,
+				56E6A3CD2B72EB7900C86E09 /* test.mp4 in Resources */,
 				E190F622242929940030B996 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -422,6 +437,7 @@
 				E1AD43A4282FD5A6004BAB77 /* ItemDetailsView.swift in Sources */,
 				E17CBE792B6AB9DA002A7253 /* ControllerButtonStyle.swift in Sources */,
 				E1B9E3C62B6576D800163EDD /* GameGenreType.swift in Sources */,
+				56E6A3CA2B72E7F900C86E09 /* VideoView.swift in Sources */,
 				E187BC9D2B65AC21007F989F /* CalSansWeight.swift in Sources */,
 				E1B9E3C42B65712D00163EDD /* String+Extension.swift in Sources */,
 				E1B9E3CC2B65771600163EDD /* MediaType.swift in Sources */,

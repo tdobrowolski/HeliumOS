@@ -6,6 +6,7 @@
 //  Copyright © 2020 Tobiasz Dobrowolski. All rights reserved.
 //
 
+import AVKit // TODO: Remove if not needed
 import SwiftUI
 
 struct HomeView: View {
@@ -13,7 +14,7 @@ struct HomeView: View {
     
     var body: some View {
         mainContentView
-            .background { backgroundView }
+            .background { videoPlayer } //backgroundView }
     }
     
     private var mainContentView: some View {
@@ -59,6 +60,23 @@ struct HomeView: View {
             mediaItems: $viewModel.mediaItems
         )
         .padding(.bottom, MainLayoutConstants.safeAreaPadding)
+    }
+
+    // MARK: Debug video player
+    private let avPlayer = AVPlayer(
+        url: .init(resource: .init(name: "test.mp4"))!
+    )
+
+    // TODO: Use custom VideoPlayer from UIKit
+    private var videoPlayer: some View {
+        VideoPlayer(player: avPlayer)
+            .ignoresSafeArea()
+            .onAppear { setupAVPlayer() }
+    }
+
+    private func setupAVPlayer() {
+        avPlayer.isMuted = true
+        avPlayer.play()
     }
 }
 
