@@ -42,7 +42,7 @@ final class HomeViewModel: ObservableObject {
             .removeDuplicates()
             .map(\.?.heroVideo?.url)
             .sink { [weak self] videoUrl in
-                guard let self, let videoUrl else { return }
+                guard let self else { return }
 
                 self.videoViewModel.update(with: videoUrl)
             }

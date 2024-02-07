@@ -70,7 +70,7 @@ struct MediaRepository {
                     heroTitle: "Burn the Hell",
                     tileImage: .init(fileExtension: .jpeg, fileName: "DoomEternalSquare"),
                     heroImage: .init(fileExtension: .jpg, fileName: "DoomEternalLarge"),
-                    heroVideo: nil
+                    heroVideo: .init(fileExtension: .mp4, fileName: "test")
                 ).asMediaItemModel
             ]
         )
