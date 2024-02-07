@@ -17,7 +17,11 @@ final class HomeViewModel: ObservableObject {
     
     let mediaRepository = MediaRepository()
     let clockService = LiveClockService()
-    
+
+    let videoViewModel = VideoViewModel()
+
+    private var subscriptions = Set<AnyCancellable>()
+
     init() {
         bind()
         setInitialActiveItem()
@@ -33,6 +37,16 @@ final class HomeViewModel: ObservableObject {
             .removeDuplicates()
             .receive(on: DispatchQueue.main)
             .assign(to: &$currentTime)
+
+        $selectedItem
+            .removeDuplicates()
+            .map(\.?.heroVideo?.url)
+            .sink { [weak self] videoUrl in
+                guard let self, let videoUrl else { return }
+
+                self.videoViewModel.update(with: videoUrl)
+            }
+            .store(in: &subscriptions)
     }
     
     private func setInitialActiveItem() {

@@ -38,13 +38,9 @@ struct BackgroundView: View {
             backgroundGradient
         }
         .background {
-            if let _ = activeItem?.backgroundMediaPath {
-                backgroundImage
-                    .blur(radius: 8.0)
-                    .scaleEffect(1.1)
-            } else {
-                Color.black
-            }
+            backgroundImage
+                .blur(radius: 8.0)
+                .scaleEffect(1.1)
         }
         .onChange(of: activeItem) { oldValue, newValue in
             guard let oldValue,
@@ -68,7 +64,7 @@ struct BackgroundView: View {
     }
     
     var backgroundImage: some View {
-        Image(activeItem?.backgroundMediaPath ?? "")
+        Image(activeItem?.heroImage.fileName ?? "")
             .resizable()
             .scaledToFill()
             .id(transitionDirection?.id)

@@ -14,7 +14,7 @@ struct HomeView: View {
     
     var body: some View {
         mainContentView
-            .background { videoPlayer } //backgroundView }
+            .background { backgroundView } // videoPlayer }
     }
     
     private var mainContentView: some View {
@@ -62,21 +62,9 @@ struct HomeView: View {
         .padding(.bottom, MainLayoutConstants.safeAreaPadding)
     }
 
-    // MARK: Debug video player
-    private let avPlayer = AVPlayer(
-        url: .init(resource: .init(name: "test.mp4"))!
-    )
-
-    // TODO: Use custom VideoPlayer from UIKit
     private var videoPlayer: some View {
-        VideoPlayer(player: avPlayer)
+        VideoView(player: viewModel.videoViewModel.player)
             .ignoresSafeArea()
-            .onAppear { setupAVPlayer() }
-    }
-
-    private func setupAVPlayer() {
-        avPlayer.isMuted = true
-        avPlayer.play()
     }
 }
 

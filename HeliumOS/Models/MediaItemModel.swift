@@ -16,10 +16,37 @@ struct MediaItemModel: MediaItemProtocol {
     let type: MediaType
     
     let heroTitle: String?
-    let backgroundMediaPath: String?
-    let tileImagePath: String?
-    
+
+    let tileImage: VisualContentModel
+    let heroImage: VisualContentModel
+    let heroVideo: VisualContentModel?
+
     var formattedGenres: String { genres.joined(separator: ", ") }
+}
+
+// TODO: Move
+
+enum FileExtension: String {
+    case mp4
+    case jpeg
+    case jpg
+    case png // TODO: Avoid in future and remove
+
+    var value: String {
+        rawValue
+    }
+}
+
+struct VisualContentModel: Equatable {
+    let fileExtension: FileExtension
+    let fileName: String
+
+    var url: URL? {
+        Bundle.main.url(
+            forResource: fileName,
+            withExtension: fileExtension.value
+        )
+    }
 }
 
 // TODO: Move
@@ -32,8 +59,10 @@ struct GameMediaItemModel {
     let type: MediaType = .game
     
     let heroTitle: String?
-    let backgroundMediaPath: String?
-    let tileImagePath: String?
+
+    let tileImage: VisualContentModel
+    let heroImage: VisualContentModel
+    let heroVideo: VisualContentModel?
 }
 
 extension GameMediaItemModel {
@@ -44,8 +73,9 @@ extension GameMediaItemModel {
             genres: genreTypes.map(\.title),
             type: type,
             heroTitle: heroTitle,
-            backgroundMediaPath: backgroundMediaPath,
-            tileImagePath: tileImagePath
+            tileImage: tileImage,
+            heroImage: heroImage,
+            heroVideo: heroVideo
         )
     }
 }
@@ -60,8 +90,10 @@ struct MusicMediaItemModel {
     let type: MediaType = .music
     
     let heroTitle: String?
-    let backgroundMediaPath: String?
-    let tileImagePath: String?
+
+    let tileImage: VisualContentModel
+    let heroImage: VisualContentModel
+    let heroVideo: VisualContentModel?
 }
 
 extension MusicMediaItemModel {
@@ -72,8 +104,9 @@ extension MusicMediaItemModel {
             genres: genreTypes.map(\.title),
             type: type,
             heroTitle: heroTitle,
-            backgroundMediaPath: backgroundMediaPath,
-            tileImagePath: tileImagePath
+            tileImage: tileImage,
+            heroImage: heroImage,
+            heroVideo: heroVideo
         )
     }
 }
@@ -88,8 +121,10 @@ struct MovieMediaItemModel {
     let type: MediaType = .movie
     
     let heroTitle: String?
-    let backgroundMediaPath: String?
-    let tileImagePath: String?
+
+    let tileImage: VisualContentModel
+    let heroImage: VisualContentModel
+    let heroVideo: VisualContentModel?
 }
 
 extension MovieMediaItemModel {
@@ -100,8 +135,9 @@ extension MovieMediaItemModel {
             genres: genreTypes.map(\.title),
             type: type,
             heroTitle: heroTitle,
-            backgroundMediaPath: backgroundMediaPath,
-            tileImagePath: tileImagePath
+            tileImage: tileImage,
+            heroImage: heroImage,
+            heroVideo: heroVideo
         )
     }
 }

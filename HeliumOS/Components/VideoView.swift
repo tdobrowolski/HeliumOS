@@ -7,20 +7,83 @@
 //
 
 import AVFoundation
+import UIKit
 import SwiftUI
 
-//struct VideoView: UIViewRepresentable {
-//    let player: AVPlayer
-//
-//    func makeUIView(context: Context) -> some UIView {
-//        let view = PlayerView()
-//        view.player = player
-//
-//        return view
-//    }
-//
-//    func updateUIView(_ uiView: UIViewType, context: Context) {
-//        <#code#>
-//    }
-//
-//}
+// MARK: UIKit View
+
+final class PlayerContainerView: UIView {
+    override class var layerClass: AnyClass {
+        AVPlayerLayer.self
+    }
+
+    var player: AVPlayer? {
+        get { playerLayer.player }
+        set { playerLayer.player = newValue }
+    }
+
+    // TODO: Check if needed
+    var isReadyForDisplay: Bool {
+        playerLayer.isReadyForDisplay
+    }
+
+    private var playerLayer: AVPlayerLayer {
+        layer as! AVPlayerLayer
+    }
+
+    init(player: AVPlayer) {
+        super.init(frame: .zero)
+        self.player = player
+
+        setupPlayerLayer()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func setupPlayerLayer() {
+        playerLayer.videoGravity = .resizeAspectFill
+        playerLayer.contentsGravity = .resizeAspectFill
+        playerLayer.backgroundColor = UIColor.clear.cgColor
+
+        backgroundColor = .clear
+    }
+}
+
+// MARK: SwiftUI View
+
+struct VideoView: UIViewRepresentable {
+    typealias UIViewType = PlayerContainerView
+
+    let player: AVPlayer
+
+    init(player: AVPlayer) {
+        self.player = player
+    }
+
+    func makeUIView(context: Context) -> PlayerContainerView {
+        PlayerContainerView(player: player)
+    }
+
+    func updateUIView(_ uiView: PlayerContainerView, context: Context) {}
+}
+
+// MARK: ViewModel
+
+final class VideoViewModel: ObservableObject {
+    let player = AVPlayer()
+
+    func update(with url: URL) {
+        player.replaceCurrentItem(with: .init(url: url))
+        play()
+    }
+
+    func play() {
+        player.play()
+    }
+
+    func pause() {
+        player.pause()
+    }
+}

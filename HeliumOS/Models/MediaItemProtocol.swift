@@ -11,8 +11,9 @@ protocol MediaItemProtocol: Identifiable, Equatable {
     var title: String { get }
     var heroTitle: String? { get }
     var type: MediaType { get }
-    var backgroundMediaPath: String? { get }
-    var tileImagePath: String? { get }
+    var tileImage: VisualContentModel { get }
+    var heroImage: VisualContentModel { get }
+    var heroVideo: VisualContentModel? { get }
     var genres: [String] { get }
     var formattedGenres: String { get }
 }

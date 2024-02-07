@@ -20,50 +20,57 @@ struct MediaRepository {
                     title: "Cyberpunk 2077",
                     genreTypes: [.action, .rpg],
                     heroTitle: "Discover Unexpected in 2077",
-                    backgroundMediaPath: "Cyberpunk2077Large",
-                    tileImagePath: "Cyberpunk2077Square"
+                    tileImage: .init(fileExtension: .jpg, fileName: "Cyberpunk2077Square"),
+                    heroImage: .init(fileExtension: .png, fileName: "Cyberpunk2077Large"),
+                    heroVideo: nil
                 ).asMediaItemModel,
                 MusicMediaItemModel(
                     title: "Future Nostalgia by Dua Lipa",
                     genreTypes: [.pop, .dance],
                     heroTitle: "Get on the dancefloor",
-                    backgroundMediaPath: "FutureNostalgiaLarge",
-                    tileImagePath: "FutureNostalgiaSquare"
+                    tileImage: .init(fileExtension: .jpg, fileName: "FutureNostalgiaSquare"),
+                    heroImage: .init(fileExtension: .jpeg, fileName: "FutureNostalgiaLarge"),
+                    heroVideo: nil
                 ).asMediaItemModel,
                 GameMediaItemModel(
                     title: "Resident Evil 3",
                     genreTypes: [.horror, .survival],
                     heroTitle: "Fight your way to the freedom",
-                    backgroundMediaPath: "ResidentEvil3Large",
-                    tileImagePath: "ResidentEvil3Square"
+                    tileImage: .init(fileExtension: .jpeg, fileName: "ResidentEvil3Square"),
+                    heroImage: .init(fileExtension: .jpg, fileName: "ResidentEvil3Large"),
+                    heroVideo: nil
                 ).asMediaItemModel,
                 GameMediaItemModel(
                     title: "Control",
                     genreTypes: [.action, .adventure],
                     heroTitle: "Unleash your hidden powers",
-                    backgroundMediaPath: "ControlLarge",
-                    tileImagePath: "ControlSquare"
+                    tileImage: .init(fileExtension: .jpg, fileName: "ControlSquare"),
+                    heroImage: .init(fileExtension: .jpeg, fileName: "ControlLarge"),
+                    heroVideo: nil
                 ).asMediaItemModel,
                 MovieMediaItemModel(
                     title: "Jurassic World: Fallen Kingdom",
                     genreTypes: [.scifi, .action],
                     heroTitle: "Welcome to the Jurassic Park",
-                    backgroundMediaPath: "JurassicWorldFallenKingdomLarge",
-                    tileImagePath: "JurassicWorldFallenKingdomSquare"
+                    tileImage: .init(fileExtension: .jpg, fileName: "JurassicWorldFallenKingdomSquare"),
+                    heroImage: .init(fileExtension: .jpg, fileName: "JurassicWorldFallenKingdomLarge"),
+                    heroVideo: nil
                 ).asMediaItemModel,
                 MovieMediaItemModel(
                     title: "Knives Out",
                     genreTypes: [.crime, .thriller],
                     heroTitle: "Everyone is a suspect",
-                    backgroundMediaPath: "KnivesOutLarge",
-                    tileImagePath: "KnivesOutSquare"
+                    tileImage: .init(fileExtension: .jpg, fileName: "KnivesOutSquare"),
+                    heroImage: .init(fileExtension: .jpg, fileName: "KnivesOutLarge"),
+                    heroVideo: nil
                 ).asMediaItemModel,
                 GameMediaItemModel(
                     title: "Doom Eternal",
                     genreTypes: [.action, .shooter],
                     heroTitle: "Burn the Hell",
-                    backgroundMediaPath: "DoomEternalLarge",
-                    tileImagePath: "DoomEternalSquare"
+                    tileImage: .init(fileExtension: .jpeg, fileName: "DoomEternalSquare"),
+                    heroImage: .init(fileExtension: .jpg, fileName: "DoomEternalLarge"),
+                    heroVideo: nil
                 ).asMediaItemModel
             ]
         )
