@@ -40,6 +40,14 @@ struct MediaRepository {
                     heroImage: .init(fileExtension: .jpg, fileName: "JusticeLarge"),
                     heroVideo: nil
                 ).asMediaItemModel,
+                MovieMediaItemModel(
+                    title: "Oppenheimer",
+                    genreTypes: [.crime, .thriller],
+                    heroTitle: "Oscar-winning masterpiece",
+                    tileImage: .init(fileExtension: .jpg, fileName: "OppenheimerSquare"),
+                    heroImage: .init(fileExtension: .jpg, fileName: "OppenheimerLarge"),
+                    heroVideo: nil
+                ).asMediaItemModel,
                 GameMediaItemModel(
                     title: "Star Wars: Outlaws",
                     genreTypes: [.action, .adventure],
@@ -73,14 +81,6 @@ struct MediaRepository {
                     heroVideo: nil
                 ).asMediaItemModel,
                 MovieMediaItemModel(
-                    title: "Oppenheimer",
-                    genreTypes: [.crime, .thriller],
-                    heroTitle: "Oscar-winning masterpiece",
-                    tileImage: .init(fileExtension: .jpg, fileName: "OppenheimerSquare"),
-                    heroImage: .init(fileExtension: .jpg, fileName: "OppenheimerLarge"),
-                    heroVideo: nil
-                ).asMediaItemModel,
-                MovieMediaItemModel(
                     title: "Spider-Man: Across the Spider-Verse",
                     genreTypes: [.animation, .adventure],
                     heroTitle: "Discover Unexpected in the Spider-Verse",
@@ -91,9 +91,9 @@ struct MediaRepository {
                 GameMediaItemModel(
                     title: "Mortal Kombat 1",
                     genreTypes: [.fighting],
-                    heroTitle: "It's in our blood",
+                    heroTitle: "It runs in our blood",
                     tileImage: .init(fileExtension: .jpg, fileName: "MortalKombat1Square"),
-                    heroImage: .init(fileExtension: .jpg, fileName: "MortalKombat1Large3"),
+                    heroImage: .init(fileExtension: .jpg, fileName: "MortalKombat1Large"),
                     heroVideo: nil
                 ).asMediaItemModel,
                 MovieMediaItemModel(
