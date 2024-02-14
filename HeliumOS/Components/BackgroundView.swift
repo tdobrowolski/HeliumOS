@@ -41,6 +41,7 @@ struct BackgroundView: View {
             backgroundImage
                 .blur(radius: 8.0)
                 .scaleEffect(1.1)
+                .background(.black)
         }
         .onChange(of: activeItem) { oldValue, newValue in
             guard let oldValue,

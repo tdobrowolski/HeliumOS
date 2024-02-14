@@ -17,43 +17,83 @@ struct MediaRepository {
         mainMediaItems.send(
             [
                 GameMediaItemModel(
-                    title: "Cyberpunk 2077",
-                    genreTypes: [.action, .rpg],
-                    heroTitle: "Discover Unexpected in 2077",
-                    tileImage: .init(fileExtension: .jpg, fileName: "Cyberpunk2077Square"),
-                    heroImage: .init(fileExtension: .png, fileName: "Cyberpunk2077Large"),
+                    title: "Alan Wake II",
+                    genreTypes: [.survival, .horror],
+                    heroTitle: "Monsters wear many faces",
+                    tileImage: .init(fileExtension: .jpg, fileName: "AlanWakeIISquare"),
+                    heroImage: .init(fileExtension: .jpg, fileName: "AlanWakeIILarge"),
+                    heroVideo: nil
+                ).asMediaItemModel,
+                GameMediaItemModel(
+                    title: "Resident Evil 4",
+                    genreTypes: [.survival, .horror],
+                    heroTitle: "Groundbreaking classic is back",
+                    tileImage: .init(fileExtension: .jpg, fileName: "ResidentEvil4Square"),
+                    heroImage: .init(fileExtension: .jpg, fileName: "ResidentEvil4Large"),
                     heroVideo: nil
                 ).asMediaItemModel,
                 MusicMediaItemModel(
-                    title: "Future Nostalgia by Dua Lipa",
-                    genreTypes: [.pop, .dance],
-                    heroTitle: "Get on the dancefloor",
-                    tileImage: .init(fileExtension: .jpg, fileName: "FutureNostalgiaSquare"),
-                    heroImage: .init(fileExtension: .jpeg, fileName: "FutureNostalgiaLarge"),
+                    title: "Hyperdrama by Justice",
+                    genreTypes: [.electronic, .synthcore],
+                    heroTitle: "Go with the flow",
+                    tileImage: .init(fileExtension: .jpg, fileName: "JusticeSquare"),
+                    heroImage: .init(fileExtension: .jpg, fileName: "JusticeLarge"),
                     heroVideo: nil
                 ).asMediaItemModel,
                 GameMediaItemModel(
-                    title: "Resident Evil 3",
-                    genreTypes: [.horror, .survival],
-                    heroTitle: "Fight your way to the freedom",
-                    tileImage: .init(fileExtension: .jpeg, fileName: "ResidentEvil3Square"),
-                    heroImage: .init(fileExtension: .jpg, fileName: "ResidentEvil3Large"),
-                    heroVideo: nil
-                ).asMediaItemModel,
-                GameMediaItemModel(
-                    title: "Control",
+                    title: "Star Wars: Outlaws",
                     genreTypes: [.action, .adventure],
-                    heroTitle: "Unleash your hidden powers",
-                    tileImage: .init(fileExtension: .jpg, fileName: "ControlSquare"),
-                    heroImage: .init(fileExtension: .jpeg, fileName: "ControlLarge"),
+                    heroTitle: "In a Galaxy Far, Far Away...",
+                    tileImage: .init(fileExtension: .jpeg, fileName: "StarWarsOutlawsSquare"),
+                    heroImage: .init(fileExtension: .jpg, fileName: "StarWarsOutlawsLarge"),
+                    heroVideo: nil
+                ).asMediaItemModel,
+                GameMediaItemModel(
+                    title: "Grand Theft Auto VI",
+                    genreTypes: [.action, .adventure],
+                    heroTitle: "Welcome to Leonida",
+                    tileImage: .init(fileExtension: .jpg, fileName: "GTAVISquare"),
+                    heroImage: .init(fileExtension: .jpg, fileName: "GTAVILarge"),
                     heroVideo: nil
                 ).asMediaItemModel,
                 MovieMediaItemModel(
-                    title: "Jurassic World: Fallen Kingdom",
-                    genreTypes: [.scifi, .action],
-                    heroTitle: "Welcome to the Jurassic Park",
-                    tileImage: .init(fileExtension: .jpg, fileName: "JurassicWorldFallenKingdomSquare"),
-                    heroImage: .init(fileExtension: .jpg, fileName: "JurassicWorldFallenKingdomLarge"),
+                    title: "Dune: Part Two",
+                    genreTypes: [.action, .adventure],
+                    heroTitle: "Explore the mythic journey",
+                    tileImage: .init(fileExtension: .jpg, fileName: "DuneSquare"),
+                    heroImage: .init(fileExtension: .jpg, fileName: "DuneLarge"),
+                    heroVideo: nil
+                ).asMediaItemModel,
+                MusicMediaItemModel(
+                    title: "Random Access Memories by Daft Punk",
+                    genreTypes: [.house, .funk, .techno],
+                    heroTitle: "Icons of the Electro-Funk",
+                    tileImage: .init(fileExtension: .jpg, fileName: "DaftPunkSquare"),
+                    heroImage: .init(fileExtension: .jpg, fileName: "DaftPunkLarge2"),
+                    heroVideo: nil
+                ).asMediaItemModel,
+                MovieMediaItemModel(
+                    title: "Oppenheimer",
+                    genreTypes: [.crime, .thriller],
+                    heroTitle: "Oscar-winning masterpiece",
+                    tileImage: .init(fileExtension: .jpg, fileName: "OppenheimerSquare"),
+                    heroImage: .init(fileExtension: .jpg, fileName: "OppenheimerLarge"),
+                    heroVideo: nil
+                ).asMediaItemModel,
+                MovieMediaItemModel(
+                    title: "Spider-Man: Across the Spider-Verse",
+                    genreTypes: [.animation, .adventure],
+                    heroTitle: "Discover Unexpected in the Spider-Verse",
+                    tileImage: .init(fileExtension: .jpg, fileName: "SpiderManSquare"),
+                    heroImage: .init(fileExtension: .jpg, fileName: "SpiderManLarge"),
+                    heroVideo: nil
+                ).asMediaItemModel,
+                GameMediaItemModel(
+                    title: "Mortal Kombat 1",
+                    genreTypes: [.fighting],
+                    heroTitle: "It's in our blood",
+                    tileImage: .init(fileExtension: .jpg, fileName: "MortalKombat1Square"),
+                    heroImage: .init(fileExtension: .jpg, fileName: "MortalKombat1Large3"),
                     heroVideo: nil
                 ).asMediaItemModel,
                 MovieMediaItemModel(
@@ -76,3 +116,5 @@ struct MediaRepository {
         )
     }
 }
+
+// TODO: Remove unused assets

@@ -36,18 +36,24 @@ struct ItemDetailsView: View {
         Text(selectedItem?.heroTitle ?? "")
             .font(.calSans(size: 62.0))
             .foregroundColor(.white)
+            .minimumScaleFactor(0.8)
+            .lineLimit(2)
     }
     
     private var activeItemSubtitle: some View {
         Text(selectedItem?.title ?? "")
             .font(.figtree(size: 22.0, weight: .bold))
             .foregroundColor(.white)
+            .minimumScaleFactor(0.9)
+            .lineLimit(1)
     }
     
     private var activeItemGenresLabel: some View {
         Text(selectedItem?.formattedGenres ?? "")
             .font(.figtree(size: 22.0, weight: .bold))
             .foregroundColor(.white)
+            .minimumScaleFactor(0.9)
+            .lineLimit(1)
     }
     
     private var controllerButton: some View {

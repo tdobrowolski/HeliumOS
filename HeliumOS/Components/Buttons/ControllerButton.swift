@@ -46,6 +46,8 @@ struct ControllerButton: View {
             Text(text)
                 .font(.figtree(size: 22.0, weight: .bold))
                 .foregroundColor(.white)
+                .minimumScaleFactor(0.9)
+                .lineLimit(1)
         }
     }
     

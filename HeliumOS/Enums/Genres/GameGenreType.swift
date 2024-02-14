@@ -13,7 +13,8 @@ enum GameGenreType {
     case survival
     case adventure
     case shooter
-    
+    case fighting
+
     var title: String {
         switch self {
         case .action: return "Action"
@@ -22,6 +23,7 @@ enum GameGenreType {
         case .survival: return "Survival"
         case .adventure: return "Adventure"
         case .shooter: return "Shooter"
+        case .fighting: return "Fighting"
         }
     }
 }

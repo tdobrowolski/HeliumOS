@@ -11,13 +11,21 @@ enum MovieGenreType {
     case thriller
     case scifi
     case action
-    
+    case adventure
+    case biography
+    case drama
+    case animation
+
     var title: String {
         switch self {
         case .crime: return "Crime"
         case .thriller: return "Thriller"
         case .scifi: return "Sci-Fi"
         case .action: return "Action"
+        case .adventure: return "Adventure"
+        case .biography: return "Biography"
+        case .drama: return "Drama"
+        case .animation: return "Animation"
         }
     }
 }
