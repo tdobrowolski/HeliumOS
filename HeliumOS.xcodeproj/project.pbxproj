@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		56B2918B2B7D5490000C6460 /* PlayerContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B2918A2B7D5490000C6460 /* PlayerContainerView.swift */; };
+		56B2918E2B7D5514000C6460 /* VideoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B2918D2B7D5514000C6460 /* VideoViewModel.swift */; };
 		56E6A3CA2B72E7F900C86E09 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E6A3C92B72E7F900C86E09 /* VideoView.swift */; };
 		56E6A3CD2B72EB7900C86E09 /* test.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 56E6A3CC2B72EB7900C86E09 /* test.mp4 */; };
 		E17CBE792B6AB9DA002A7253 /* ControllerButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17CBE782B6AB9DA002A7253 /* ControllerButtonStyle.swift */; };
@@ -58,6 +60,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		56B2918A2B7D5490000C6460 /* PlayerContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerContainerView.swift; sourceTree = "<group>"; };
+		56B2918D2B7D5514000C6460 /* VideoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewModel.swift; sourceTree = "<group>"; };
 		56E6A3C92B72E7F900C86E09 /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
 		56E6A3CC2B72EB7900C86E09 /* test.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.mp4; sourceTree = "<group>"; };
 		E17CBE782B6AB9DA002A7253 /* ControllerButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerButtonStyle.swift; sourceTree = "<group>"; };
@@ -121,6 +125,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		56B291892B7D5484000C6460 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				56B2918A2B7D5490000C6460 /* PlayerContainerView.swift */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		56B2918C2B7D54DD000C6460 /* VideoPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				56E6A3C92B72E7F900C86E09 /* VideoView.swift */,
+				56B2918D2B7D5514000C6460 /* VideoViewModel.swift */,
+			);
+			path = VideoPlayer;
+			sourceTree = "<group>";
+		};
 		56E6A3CB2B72EB6400C86E09 /* Videos */ = {
 			isa = PBXGroup;
 			children = (
@@ -266,13 +287,14 @@
 		E1AD439A282FD339004BAB77 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				56B291892B7D5484000C6460 /* UIView */,
 				E1AD43A9282FD83D004BAB77 /* Buttons */,
 				E1AD439B282FD340004BAB77 /* BackgroundView.swift */,
 				E1AD439D282FD3B8004BAB77 /* MediaTileView.swift */,
 				E1AD439F282FD41D004BAB77 /* MainTilesListView.swift */,
 				E1AD43A3282FD5A6004BAB77 /* ItemDetailsView.swift */,
 				E1AD43A7282FD740004BAB77 /* NavigationView.swift */,
-				56E6A3C92B72E7F900C86E09 /* VideoView.swift */,
+				56B2918C2B7D54DD000C6460 /* VideoPlayer */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -435,6 +457,7 @@
 				E1B9E3D32B6580A500163EDD /* HomeView.swift in Sources */,
 				E1B9E3CA2B6576EF00163EDD /* MovieGenreType.swift in Sources */,
 				E1AD43A4282FD5A6004BAB77 /* ItemDetailsView.swift in Sources */,
+				56B2918B2B7D5490000C6460 /* PlayerContainerView.swift in Sources */,
 				E17CBE792B6AB9DA002A7253 /* ControllerButtonStyle.swift in Sources */,
 				E1B9E3C62B6576D800163EDD /* GameGenreType.swift in Sources */,
 				56E6A3CA2B72E7F900C86E09 /* VideoView.swift in Sources */,
@@ -445,6 +468,7 @@
 				E190F61C242929930030B996 /* AppDelegate.swift in Sources */,
 				E1FDEBCC24310D0300E9EC63 /* UIAudioService.swift in Sources */,
 				E1AD439E282FD3B8004BAB77 /* MediaTileView.swift in Sources */,
+				56B2918E2B7D5514000C6460 /* VideoViewModel.swift in Sources */,
 				E190F61E242929930030B996 /* SceneDelegate.swift in Sources */,
 				E1E5FEE72B684F4900F1F8D6 /* ControllerButtonType.swift in Sources */,
 				E1AD43A8282FD740004BAB77 /* NavigationView.swift in Sources */,

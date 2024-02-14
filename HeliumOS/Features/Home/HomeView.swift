@@ -10,10 +10,10 @@ import SwiftUI
 
 struct HomeView: View {
     @ObservedObject var viewModel: HomeViewModel
-    
+
     var body: some View {
         mainContentView
-            .background { videoPlayer } // backgroundView }
+            .background { backgroundView }
     }
     
     private var mainContentView: some View {
@@ -46,6 +46,11 @@ struct HomeView: View {
             items: $viewModel.mediaItems
         )
         .edgesIgnoringSafeArea(.all)
+        .overlay {
+            videoPlayer
+                .opacity(viewModel.isReadyToPlay ? 1.0 : 0.0)
+                .animation(.easeOut(duration: 0.6), value: viewModel.isReadyToPlay)
+        }
     }
     
     private var selectedItemDetails: some View {
@@ -62,8 +67,14 @@ struct HomeView: View {
     }
 
     private var videoPlayer: some View {
-        VideoView(player: viewModel.videoViewModel.player)
-            .ignoresSafeArea()
+        VideoView(
+            player: viewModel.videoViewModel.player,
+            isReadyToPlay: .init(
+                get: { viewModel.isReadyToPlay },
+                set: { viewModel.isReadyToPlay = $0 }
+            )
+        )
+        .ignoresSafeArea()
     }
 }
 

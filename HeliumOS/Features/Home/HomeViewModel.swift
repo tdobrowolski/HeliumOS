@@ -14,7 +14,8 @@ final class HomeViewModel: ObservableObject {
     @Published var mediaItems: [MediaItemModel] = []
     @Published var currentTime: String = .timePlaceholder
     @Published var selectedMenuItem: MenuItemType = .home
-    
+    @Published var isReadyToPlay = false
+
     let mediaRepository = MediaRepository()
     let clockService = LiveClockService()
 
