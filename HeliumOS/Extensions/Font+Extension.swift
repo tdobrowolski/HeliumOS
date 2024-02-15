@@ -8,13 +8,7 @@
 
 import SwiftUI
 
-extension Font {
-    // MARK: ProductSans
-    
-    static func productSans(size: CGFloat, weight: ProductSansWeight) -> Font {
-        .custom("ProductSans-\(weight.text)", size: size)
-    }
-    
+extension Font {    
     // MARK: Cal Sans
     
     static func calSans(size: CGFloat, weight: CalSansWeight = .semibold) -> Font {

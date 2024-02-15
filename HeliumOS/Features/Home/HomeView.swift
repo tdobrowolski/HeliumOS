@@ -14,6 +14,7 @@ struct HomeView: View {
     var body: some View {
         mainContentView
             .background { backgroundView }
+            .persistentSystemOverlays(.hidden)
     }
     
     private var mainContentView: some View {

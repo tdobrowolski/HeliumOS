@@ -7,6 +7,7 @@
 //
 
 import Combine
+import SwiftUI
 
 struct MediaRepository {
     var mainMediaItems: CurrentValueSubject<[MediaItemModel], Never> = .init([])
@@ -20,96 +21,96 @@ struct MediaRepository {
                     title: "Alan Wake II",
                     genreTypes: [.survival, .horror],
                     heroTitle: "Monsters wear many faces",
-                    tileImage: .init(fileExtension: .jpg, fileName: "AlanWakeIISquare"),
-                    heroImage: .init(fileExtension: .jpg, fileName: "AlanWakeIILarge"),
+                    tileImage: .alanWakeIISquare,
+                    heroImage: .alanWakeIILarge,
                     heroVideo: nil
                 ).asMediaItemModel,
                 GameMediaItemModel(
                     title: "Resident Evil 4",
                     genreTypes: [.survival, .horror],
                     heroTitle: "Groundbreaking classic is back",
-                    tileImage: .init(fileExtension: .jpg, fileName: "ResidentEvil4Square"),
-                    heroImage: .init(fileExtension: .jpg, fileName: "ResidentEvil4Large"),
+                    tileImage: .residentEvil4Square,
+                    heroImage: .residentEvil4Large,
                     heroVideo: nil
                 ).asMediaItemModel,
                 MusicMediaItemModel(
                     title: "Hyperdrama by Justice",
                     genreTypes: [.electronic, .synthcore],
                     heroTitle: "Go with the flow",
-                    tileImage: .init(fileExtension: .jpg, fileName: "JusticeSquare"),
-                    heroImage: .init(fileExtension: .jpg, fileName: "JusticeLarge"),
-                    heroVideo: nil
+                    tileImage: .justiceSquare,
+                    heroImage: .justiceLarge,
+                    heroVideo: .init(fileExtension: .mov, fileName: "justice")
                 ).asMediaItemModel,
                 MovieMediaItemModel(
                     title: "Oppenheimer",
                     genreTypes: [.crime, .thriller],
                     heroTitle: "Oscar-winning masterpiece",
-                    tileImage: .init(fileExtension: .jpg, fileName: "OppenheimerSquare"),
-                    heroImage: .init(fileExtension: .jpg, fileName: "OppenheimerLarge"),
+                    tileImage: .oppenheimerSquare,
+                    heroImage: .oppenheimerLarge,
                     heroVideo: nil
                 ).asMediaItemModel,
                 GameMediaItemModel(
                     title: "Star Wars: Outlaws",
                     genreTypes: [.action, .adventure],
                     heroTitle: "In a Galaxy Far, Far Away...",
-                    tileImage: .init(fileExtension: .jpeg, fileName: "StarWarsOutlawsSquare"),
-                    heroImage: .init(fileExtension: .jpg, fileName: "StarWarsOutlawsLarge"),
+                    tileImage: .starWarsOutlawsSquare,
+                    heroImage: .starWarsOutlawsLarge,
                     heroVideo: nil
                 ).asMediaItemModel,
                 GameMediaItemModel(
                     title: "Grand Theft Auto VI",
                     genreTypes: [.action, .adventure],
                     heroTitle: "Welcome to Leonida",
-                    tileImage: .init(fileExtension: .jpg, fileName: "GTAVISquare"),
-                    heroImage: .init(fileExtension: .jpg, fileName: "GTAVILarge"),
+                    tileImage: .gtaviSquare,
+                    heroImage: .gtaviLarge,
                     heroVideo: nil
                 ).asMediaItemModel,
                 MovieMediaItemModel(
                     title: "Dune: Part Two",
                     genreTypes: [.action, .adventure],
                     heroTitle: "Explore the mythic journey",
-                    tileImage: .init(fileExtension: .jpg, fileName: "DuneSquare"),
-                    heroImage: .init(fileExtension: .jpg, fileName: "DuneLarge"),
+                    tileImage: .duneSquare,
+                    heroImage: .duneLarge,
                     heroVideo: nil
                 ).asMediaItemModel,
                 MusicMediaItemModel(
                     title: "Random Access Memories by Daft Punk",
                     genreTypes: [.house, .funk, .techno],
                     heroTitle: "Icons of the Electro-Funk",
-                    tileImage: .init(fileExtension: .jpg, fileName: "DaftPunkSquare"),
-                    heroImage: .init(fileExtension: .jpg, fileName: "DaftPunkLarge2"),
+                    tileImage: .daftPunkSquare,
+                    heroImage: .daftPunkLarge2,
                     heroVideo: nil
                 ).asMediaItemModel,
                 MovieMediaItemModel(
                     title: "Spider-Man: Across the Spider-Verse",
                     genreTypes: [.animation, .adventure],
                     heroTitle: "Discover Unexpected in the Spider-Verse",
-                    tileImage: .init(fileExtension: .jpg, fileName: "SpiderManSquare"),
-                    heroImage: .init(fileExtension: .jpg, fileName: "SpiderManLarge"),
+                    tileImage: .spiderManSquare,
+                    heroImage: .spiderManLarge,
                     heroVideo: nil
                 ).asMediaItemModel,
                 GameMediaItemModel(
                     title: "Mortal Kombat 1",
                     genreTypes: [.fighting],
                     heroTitle: "It runs in our blood",
-                    tileImage: .init(fileExtension: .jpg, fileName: "MortalKombat1Square"),
-                    heroImage: .init(fileExtension: .jpg, fileName: "MortalKombat1Large"),
+                    tileImage: .mortalKombat1Square,
+                    heroImage: .mortalKombat1Large,
                     heroVideo: nil
                 ).asMediaItemModel,
                 MovieMediaItemModel(
                     title: "Knives Out",
                     genreTypes: [.crime, .thriller],
                     heroTitle: "Everyone is a suspect",
-                    tileImage: .init(fileExtension: .jpg, fileName: "KnivesOutSquare"),
-                    heroImage: .init(fileExtension: .jpg, fileName: "KnivesOutLarge"),
+                    tileImage: .knivesOutSquare,
+                    heroImage: .knivesOutLarge,
                     heroVideo: nil
                 ).asMediaItemModel,
                 GameMediaItemModel(
                     title: "Doom Eternal",
                     genreTypes: [.action, .shooter],
                     heroTitle: "Burn the Hell",
-                    tileImage: .init(fileExtension: .jpeg, fileName: "DoomEternalSquare"),
-                    heroImage: .init(fileExtension: .jpg, fileName: "DoomEternalLarge"),
+                    tileImage: .doomEternalSquare,
+                    heroImage: .doomEternalLarge,
                     heroVideo: .init(fileExtension: .mp4, fileName: "test")
                 ).asMediaItemModel
             ]

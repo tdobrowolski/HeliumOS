@@ -6,13 +6,15 @@
 //  Copyright © 2024 Tobiasz Dobrowolski. All rights reserved.
 //
 
+import SwiftUI
+
 protocol MediaItemProtocol: Identifiable, Equatable {
     var id: String { get }
     var title: String { get }
     var heroTitle: String? { get }
     var type: MediaType { get }
-    var tileImage: VisualContentModel { get }
-    var heroImage: VisualContentModel { get }
+    var tileImage: ImageResource { get }
+    var heroImage: ImageResource { get }
     var heroVideo: VisualContentModel? { get }
     var genres: [String] { get }
     var formattedGenres: String { get }

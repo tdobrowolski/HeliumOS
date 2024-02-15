@@ -30,8 +30,6 @@
 		<string>Figtree-Medium.ttf</string>
 		<string>Figtree-Regular.ttf</string>
 		<string>Figtree-Semibold.ttf</string>
-		<string>ProductSans-Bold.ttf</string>
-		<string>ProductSans-Regular.ttf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>

@@ -36,7 +36,7 @@ struct ControllerButton: View {
             .foregroundColor(buttonType.iconColor)
             .background {
                 Circle()
-                    .fill(Color.white.opacity(0.9))
+                    .fill(Color.frostWhite.opacity(0.9))
             }
     }
     
@@ -45,7 +45,7 @@ struct ControllerButton: View {
         if let text {
             Text(text)
                 .font(.figtree(size: 22.0, weight: .bold))
-                .foregroundColor(.white)
+                .foregroundColor(.frostWhite)
                 .minimumScaleFactor(0.9)
                 .lineLimit(1)
         }
@@ -64,7 +64,7 @@ struct ControllerButton: View {
 
 #Preview {
     ZStack {
-        Color.black
+        Color.oilBlack
             .ignoresSafeArea()
         ControllerButton(buttonType: .aButton, text: "Launch game")
             .buttonStyle(ControllerButtonStyle())

@@ -39,7 +39,7 @@ struct MediaTileView: View {
     }
     
     private var content: some View {
-        Image(mediaItem.tileImage.fileName)
+        Image(mediaItem.tileImage)
             .resizable()
             .aspectRatio(contentMode: .fit)
             .clipShape(roundedClipShape)
@@ -63,7 +63,7 @@ struct MediaTileView: View {
     }
     
     private var backgroundGlow: some View {
-        Image(mediaItem.tileImage.fileName)
+        Image(mediaItem.tileImage)
             .resizable()
             .scaledToFit()
             .clipShape(roundedClipShape)

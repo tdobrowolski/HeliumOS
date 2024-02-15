@@ -41,7 +41,7 @@ struct BackgroundView: View {
             backgroundImage
                 .blur(radius: 8.0)
                 .scaleEffect(1.1)
-                .background(.black)
+                .background(.oilBlack)
         }
         .onChange(of: activeItem) { oldValue, newValue in
             guard let oldValue,
@@ -64,12 +64,15 @@ struct BackgroundView: View {
         }
     }
     
+    @ViewBuilder
     var backgroundImage: some View {
-        Image(activeItem?.heroImage.fileName ?? "")
-            .resizable()
-            .scaledToFill()
-            .id(transitionDirection?.id)
-            .containerRelativeFrame(.horizontal)
+        if let heroImage = activeItem?.heroImage {
+            Image(heroImage)
+                .resizable()
+                .scaledToFill()
+                .id(transitionDirection?.id)
+                .containerRelativeFrame(.horizontal)
+        }
     }
     
     var backgroundGradient: some View {

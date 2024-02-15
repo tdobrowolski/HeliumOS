@@ -36,7 +36,7 @@ struct MenuButton: View {
                     options: .speed(1.3),
                     value: animationHelper
                 )
-                .foregroundColor(isSelected ? .blueNeon : .white)
+                .foregroundColor(isSelected ? .blueNeon : .frostWhite)
         }
     }
     
