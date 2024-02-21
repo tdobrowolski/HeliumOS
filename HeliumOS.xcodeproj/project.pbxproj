@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		563D2BFF2B8673760035620D /* coldplay.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 563D2BFE2B8673760035620D /* coldplay.mp4 */; };
+		563D2C022B8679590035620D /* BootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563D2C012B8679590035620D /* BootView.swift */; };
+		563D2C042B8685C30035620D /* AnimationConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563D2C032B8685C30035620D /* AnimationConstants.swift */; };
+		563D2C072B8688F00035620D /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563D2C062B8688F00035620D /* RootView.swift */; };
+		563D2C092B8689070035620D /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563D2C082B8689070035620D /* RootViewModel.swift */; };
 		565B361F2B7E9A17002D54DC /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 565B361E2B7E9A17002D54DC /* Colors.xcassets */; };
 		565B36212B7E9BAE002D54DC /* FileExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565B36202B7E9BAE002D54DC /* FileExtension.swift */; };
 		565B36232B7E9C27002D54DC /* VisualContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565B36222B7E9C27002D54DC /* VisualContentModel.swift */; };
@@ -17,7 +22,6 @@
 		56B2918B2B7D5490000C6460 /* PlayerContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B2918A2B7D5490000C6460 /* PlayerContainerView.swift */; };
 		56B2918E2B7D5514000C6460 /* VideoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B2918D2B7D5514000C6460 /* VideoViewModel.swift */; };
 		56E6A3CA2B72E7F900C86E09 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E6A3C92B72E7F900C86E09 /* VideoView.swift */; };
-		56E6A3CD2B72EB7900C86E09 /* test.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 56E6A3CC2B72EB7900C86E09 /* test.mp4 */; };
 		E17CBE792B6AB9DA002A7253 /* ControllerButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17CBE782B6AB9DA002A7253 /* ControllerButtonStyle.swift */; };
 		E187BC6C2B658CB6007F989F /* LiveClockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E187BC6B2B658CB6007F989F /* LiveClockService.swift */; };
 		E187BC702B65A7ED007F989F /* CalSans-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = E187BC6F2B65A7ED007F989F /* CalSans-Semibold.otf */; };
@@ -64,6 +68,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		563D2BFE2B8673760035620D /* coldplay.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = coldplay.mp4; sourceTree = "<group>"; };
+		563D2C012B8679590035620D /* BootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BootView.swift; sourceTree = "<group>"; };
+		563D2C032B8685C30035620D /* AnimationConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationConstants.swift; sourceTree = "<group>"; };
+		563D2C062B8688F00035620D /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		563D2C082B8689070035620D /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
 		565B361E2B7E9A17002D54DC /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		565B36202B7E9BAE002D54DC /* FileExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileExtension.swift; sourceTree = "<group>"; };
 		565B36222B7E9C27002D54DC /* VisualContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualContentModel.swift; sourceTree = "<group>"; };
@@ -74,7 +83,6 @@
 		56B2918A2B7D5490000C6460 /* PlayerContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerContainerView.swift; sourceTree = "<group>"; };
 		56B2918D2B7D5514000C6460 /* VideoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewModel.swift; sourceTree = "<group>"; };
 		56E6A3C92B72E7F900C86E09 /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
-		56E6A3CC2B72EB7900C86E09 /* test.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.mp4; sourceTree = "<group>"; };
 		E17CBE782B6AB9DA002A7253 /* ControllerButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerButtonStyle.swift; sourceTree = "<group>"; };
 		E187BC6B2B658CB6007F989F /* LiveClockService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveClockService.swift; sourceTree = "<group>"; };
 		E187BC6F2B65A7ED007F989F /* CalSans-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CalSans-Semibold.otf"; sourceTree = "<group>"; };
@@ -133,6 +141,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		563D2C002B8679480035620D /* Boot */ = {
+			isa = PBXGroup;
+			children = (
+				563D2C012B8679590035620D /* BootView.swift */,
+			);
+			path = Boot;
+			sourceTree = "<group>";
+		};
+		563D2C052B8688EA0035620D /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				563D2C062B8688F00035620D /* RootView.swift */,
+				563D2C082B8689070035620D /* RootViewModel.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
 		56B291892B7D5484000C6460 /* UIView */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,8 +178,8 @@
 		56E6A3CB2B72EB6400C86E09 /* Videos */ = {
 			isa = PBXGroup;
 			children = (
+				563D2BFE2B8673760035620D /* coldplay.mp4 */,
 				565B362C2B7EBE38002D54DC /* justice.mov */,
-				56E6A3CC2B72EB7900C86E09 /* test.mp4 */,
 			);
 			path = Videos;
 			sourceTree = "<group>";
@@ -287,6 +312,7 @@
 				E1B9E3CB2B65771600163EDD /* MediaType.swift */,
 				E1E5FEE62B684F4900F1F8D6 /* ControllerButtonType.swift */,
 				E187BCA52B65BC18007F989F /* MainLayoutConstants.swift */,
+				563D2C032B8685C30035620D /* AnimationConstants.swift */,
 				565B36202B7E9BAE002D54DC /* FileExtension.swift */,
 			);
 			path = Enums;
@@ -327,6 +353,8 @@
 		E1B9E3C12B656DFC00163EDD /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				563D2C052B8688EA0035620D /* Root */,
+				563D2C002B8679480035620D /* Boot */,
 				E1B9E3C22B656E0800163EDD /* Home */,
 			);
 			path = Features;
@@ -440,6 +468,7 @@
 				E187BC702B65A7ED007F989F /* CalSans-Semibold.otf in Resources */,
 				E187BCA22B65AE63007F989F /* Figtree-Extrabold.ttf in Resources */,
 				E187BC9F2B65AE63007F989F /* Figtree-Light.ttf in Resources */,
+				563D2BFF2B8673760035620D /* coldplay.mp4 in Resources */,
 				E190F628242929940030B996 /* LaunchScreen.storyboard in Resources */,
 				E187BCA02B65AE63007F989F /* Figtree-Black.ttf in Resources */,
 				E187BCA32B65AE63007F989F /* Figtree-Bold.ttf in Resources */,
@@ -448,7 +477,6 @@
 				E1D20060244B7ECB00AC36B7 /* changeSelection.wav in Resources */,
 				E190F625242929940030B996 /* Preview Assets.xcassets in Resources */,
 				E187BCA42B65AE63007F989F /* Figtree-Semibold.ttf in Resources */,
-				56E6A3CD2B72EB7900C86E09 /* test.mp4 in Resources */,
 				E190F622242929940030B996 /* Images.xcassets in Resources */,
 				565B361F2B7E9A17002D54DC /* Colors.xcassets in Resources */,
 				565B362D2B7EBE38002D54DC /* justice.mov in Resources */,
@@ -486,16 +514,20 @@
 				56B2918E2B7D5514000C6460 /* VideoViewModel.swift in Sources */,
 				E190F61E242929930030B996 /* SceneDelegate.swift in Sources */,
 				E1E5FEE72B684F4900F1F8D6 /* ControllerButtonType.swift in Sources */,
+				563D2C022B8679590035620D /* BootView.swift in Sources */,
 				565B36212B7E9BAE002D54DC /* FileExtension.swift in Sources */,
+				563D2C092B8689070035620D /* RootViewModel.swift in Sources */,
 				E1AD43A8282FD740004BAB77 /* NavigationView.swift in Sources */,
 				E1AD4394282FCE72004BAB77 /* Font+Extension.swift in Sources */,
 				E1AD43A6282FD703004BAB77 /* MenuButton.swift in Sources */,
 				565B36252B7E9C58002D54DC /* GameMediaItemModel.swift in Sources */,
 				E1E5FEE52B684EA800F1F8D6 /* ControllerButton.swift in Sources */,
 				E1AD43A0282FD41D004BAB77 /* MainTilesListView.swift in Sources */,
+				563D2C072B8688F00035620D /* RootView.swift in Sources */,
 				E1AD439C282FD340004BAB77 /* BackgroundView.swift in Sources */,
 				E1B9E3C82B6576E800163EDD /* MusicGenreType.swift in Sources */,
 				E1B9E3CE2B65772D00163EDD /* MediaItemProtocol.swift in Sources */,
+				563D2C042B8685C30035620D /* AnimationConstants.swift in Sources */,
 				E1AD4397282FD0F0004BAB77 /* MenuItemType.swift in Sources */,
 				E1FDEBD12431335D00E9EC63 /* MediaItemModel.swift in Sources */,
 				E187BC6C2B658CB6007F989F /* LiveClockService.swift in Sources */,

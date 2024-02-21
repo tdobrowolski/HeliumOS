@@ -78,7 +78,7 @@ struct MediaRepository {
                     genreTypes: [.house, .funk, .techno],
                     heroTitle: "Icons of the Electro-Funk",
                     tileImage: .daftPunkSquare,
-                    heroImage: .daftPunkLarge2,
+                    heroImage: .daftPunkLarge,
                     heroVideo: nil
                 ).asMediaItemModel,
                 MovieMediaItemModel(
@@ -111,7 +111,15 @@ struct MediaRepository {
                     heroTitle: "Burn the Hell",
                     tileImage: .doomEternalSquare,
                     heroImage: .doomEternalLarge,
-                    heroVideo: .init(fileExtension: .mp4, fileName: "test")
+                    heroVideo: nil
+                ).asMediaItemModel,
+                MusicMediaItemModel(
+                    title: "A Head Full Of Dreams by Coldplay",
+                    genreTypes: [.pop],
+                    heroTitle: "Relive adventure of your lifetime",
+                    tileImage: .coldplaySquare,
+                    heroImage: .coldplayLarge,
+                    heroVideo: .init(fileExtension: .mp4, fileName: "coldplay")
                 ).asMediaItemModel
             ]
         )
