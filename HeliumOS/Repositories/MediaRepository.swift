@@ -68,7 +68,7 @@ struct MediaRepository {
                 MovieMediaItemModel(
                     title: "Dune: Part Two",
                     genreTypes: [.action, .adventure],
-                    heroTitle: "Explore the mythic journey",
+                    heroTitle: "The visions are clear now",
                     tileImage: .duneSquare,
                     heroImage: .duneLarge,
                     heroVideo: nil
