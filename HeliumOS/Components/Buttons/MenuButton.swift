@@ -16,7 +16,6 @@ struct MenuButton: View {
     
     @State private var animationHelper = false
     
-    
     var body: some View {
         content
     }

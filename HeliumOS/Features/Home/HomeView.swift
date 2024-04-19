@@ -33,7 +33,8 @@ struct HomeView: View {
     private var navigationBar: some View {
         NavigationView(
             currentTime: $viewModel.currentTime,
-            selectedMenuItem: $viewModel.selectedMenuItem
+            selectedMenuItem: $viewModel.selectedMenuItem,
+            isGameControllerConnected: $viewModel.isGameControllerConnected
         )
         .padding(
             [.leading, .top, .trailing],

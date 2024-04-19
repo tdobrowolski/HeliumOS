@@ -91,8 +91,8 @@ final class HomeViewModel: ObservableObject {
         case .launchMedia: return
         case .nextMediaItem: selectNextMediaItem()
         case .prevMediaItem: selectPreviousMediaItem()
-        case .nextMenuItem: return
-        case .prevMenuItem: return
+        case .nextMenuItem: selectNextMenuItem()
+        case .prevMenuItem: selectPreviousMenuItem()
         }
     }
     
@@ -115,6 +115,30 @@ final class HomeViewModel: ObservableObject {
         
         selectedItem = mediaItems[prevItemIndex]
     }
+    
+    private func selectNextMenuItem() {
+        let menuItems = MenuItemType.mainMenuTypes
+        guard let selectedItemIndex = menuItems.firstIndex(where: { $0 == selectedMenuItem }) else { return }
+        
+        let nextItemIndex = selectedItemIndex + 1
+        
+        guard menuItems.indices.contains(nextItemIndex) else { return }
+        
+        selectedMenuItem = menuItems[nextItemIndex]
+        gameControllerService.fireHapticFeedback()
+    }
+    
+    private func selectPreviousMenuItem() {
+        let menuItems = MenuItemType.mainMenuTypes
+        guard let selectedItemIndex = menuItems.firstIndex(where: { $0 == selectedMenuItem }) else { return }
+        
+        let prevItemIndex = selectedItemIndex - 1
+        
+        guard menuItems.indices.contains(prevItemIndex) else { return }
+        
+        selectedMenuItem = menuItems[prevItemIndex]
+        gameControllerService.fireHapticFeedback()
+    }
 }
 
 fileprivate extension ControllerInputType {
@@ -127,14 +151,4 @@ fileprivate extension ControllerInputType {
         case .rightShoulder: return .nextMenuItem
         }
     }
-}
-
-enum HomeControllerActionType {
-    case launchMedia
-    
-    case nextMediaItem
-    case prevMediaItem
-    
-    case nextMenuItem
-    case prevMenuItem
 }

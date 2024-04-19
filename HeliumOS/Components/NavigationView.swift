@@ -11,6 +11,7 @@ import SwiftUI
 struct NavigationView: View {
     @Binding var currentTime: String
     @Binding var selectedMenuItem: MenuItemType
+    @Binding var isGameControllerConnected: Bool
     
     var body: some View {
         content
@@ -28,6 +29,7 @@ struct NavigationView: View {
     
     private var mainButtons: some View {
         HStack(spacing: 32.0) {
+            if isGameControllerConnected { leftShoulderControllerIcon }
             ForEach(MenuItemType.mainMenuTypes) { item in
                 MenuButton(
                     isSelected: .init(
@@ -37,6 +39,7 @@ struct NavigationView: View {
                     item: item
                 )
             }
+            if isGameControllerConnected { rightShoulderControllerIcon }
         }
     }
     
@@ -60,6 +63,22 @@ struct NavigationView: View {
             .contentTransition(.numericText())
             .frame(alignment: .trailing)
     }
+    
+    private var rightShoulderControllerIcon: some View {
+        Image(systemName: "r1.button.roundedbottom.horizontal.fill")
+            .font(.system(size: 24.0))
+            .fontWeight(.bold)
+            .symbolRenderingMode(.hierarchical)
+            .foregroundColor(.frostWhite)
+    }
+    
+    private var leftShoulderControllerIcon: some View {
+        Image(systemName: "l1.button.roundedbottom.horizontal.fill")
+            .font(.system(size: 24.0))
+            .fontWeight(.bold)
+            .symbolRenderingMode(.hierarchical)
+            .foregroundColor(.frostWhite)
+    }
 }
 
 #Preview {
@@ -67,7 +86,8 @@ struct NavigationView: View {
         Color.oilBlack.ignoresSafeArea()
         NavigationView(
             currentTime: .constant("21:37"),
-            selectedMenuItem: .constant(.home)
+            selectedMenuItem: .constant(.home),
+            isGameControllerConnected: .constant(true)
         )
         .padding(40.0)
     }
