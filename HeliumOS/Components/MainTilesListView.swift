@@ -31,21 +31,23 @@ struct MainTilesListView: View {
                             parentPosition: mediaItems.getParentPosition(for: item)
                         )
                         .id(item.id)
-                        .onTapGesture { itemDidTap(item, proxy: proxy) }
+                        .onTapGesture { itemDidTap(item) }
                     }
                 }
             }
             .scrollClipDisabled()
             .contentMargins(.horizontal, MainLayoutConstants.safeAreaPadding, for: .scrollContent)
+            .onChange(of: activeItem) {
+                withAnimation {
+                    proxy.scrollTo(activeItem?.id, anchor: .leading)
+                }
+            }
         }
     }
     
-    private func itemDidTap(_ item: MediaItemModel, proxy: ScrollViewProxy) {
+    private func itemDidTap(_ item: MediaItemModel) {
         UIAudioService.shared.playUISound(for: .changeSelection)
         activeItem = item
-        withAnimation(.easeOut(duration: 0.3)) {
-            proxy.scrollTo(item.id, anchor: .leading)
-        }
     }
 }
 
