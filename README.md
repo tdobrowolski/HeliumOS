@@ -1,7 +1,7 @@
 ![HeliumOS logo](Images/HeliumOS-Logo.png)
 
 # HeliumOS - made for big screens
-An iPad version of Helium, OS designed for the bigger screens.
+An iPad version of HeliumOS, UI designed for the bigger screens.
 
 ![HeliumOS Home screen](Images/HeliumOS-Home.png)
 
@@ -13,7 +13,7 @@ It started as a first attempt to create a SwiftUI app. Over the years it was my 
 
 Designed, prototyped and coded by me.
 
-![HeliumOS on iPad Pro](Images/HeliumOS-iPadPro.png "iPad Pro" =50%x) ![HeliumOS on iPad Mini](Images/HeliumOS-iPadMini.png "iPad Mini" =50%x)
+![HeliumOS on iPad Pro](Images/HeliumOS-iPadPro.png "iPad Pro") ![HeliumOS on iPad Mini](Images/HeliumOS-iPadMini.png "iPad Mini")
 
 ## Demo features
 The app consists proof of concept implementation for HeliumOS Home screen. No further navigation, screens or apps are supported.
