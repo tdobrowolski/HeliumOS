@@ -13,10 +13,14 @@ It started as a first attempt to create a SwiftUI app. Over the years it was my 
 
 Designed, prototyped and coded by me.
 
-![HeliumOS on iPad Pro](Images/HeliumOS-iPadPro.png "iPad Pro") ![HeliumOS on iPad Mini](Images/HeliumOS-iPadMini.png "iPad Mini")
+![HeliumOS on iPad Pro](Images/HeliumOS-iPadPro.png "iPad Pro")
+_HeliumOS on iPad Pro_
 
 ## Demo features
 The app consists proof of concept implementation for HeliumOS Home screen. No further navigation, screens or apps are supported.
+
+![HeliumOS on iPad Mini](Images/HeliumOS-iPadMini.png "iPad Mini")
+_HeliumOS on iPad Mini_
 
 ### Game Controller support
 - User can control the system with connected game controller
