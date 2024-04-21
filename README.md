@@ -44,6 +44,9 @@ _HeliumOS on iPad Mini_
 - Navigate to first or last item in media horizontal list (only with game controller)
 - Selected media change animates background based on which side the change is coming from (left or right)
 
+## Known issues
+- The media item on the left of currently selected item is not fully tappable when not fully visible.
+
 ## Original concept from 2017
 If you want to see how concept evolved, you can [visit original projects page on Behance](https://www.behance.net/gallery/48880999/Helium-OS-designed-for-future "Project on Behance").
 
