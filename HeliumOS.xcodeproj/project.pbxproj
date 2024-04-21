@@ -66,9 +66,7 @@
 		E1B9E3D12B65801500163EDD /* MediaRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B9E3D02B65801500163EDD /* MediaRepository.swift */; };
 		E1B9E3D32B6580A500163EDD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B9E3D22B6580A500163EDD /* HomeView.swift */; };
 		E1C67F1A2BCF0A8D00523C3D /* GameControllerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C67F192BCF0A8D00523C3D /* GameControllerService.swift */; };
-		E1D20060244B7ECB00AC36B7 /* changeSelection.wav in Resources */ = {isa = PBXBuildFile; fileRef = E1D2005F244B7ECB00AC36B7 /* changeSelection.wav */; };
 		E1E5FEE52B684EA800F1F8D6 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E5FEE42B684EA800F1F8D6 /* ActionButton.swift */; };
-		E1FDEBCC24310D0300E9EC63 /* UIAudioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FDEBCB24310D0300E9EC63 /* UIAudioService.swift */; };
 		E1FDEBD12431335D00E9EC63 /* MediaItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FDEBD02431335D00E9EC63 /* MediaItemModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -134,9 +132,7 @@
 		E1B9E3D02B65801500163EDD /* MediaRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaRepository.swift; sourceTree = "<group>"; };
 		E1B9E3D22B6580A500163EDD /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		E1C67F192BCF0A8D00523C3D /* GameControllerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameControllerService.swift; sourceTree = "<group>"; };
-		E1D2005F244B7ECB00AC36B7 /* changeSelection.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = changeSelection.wav; sourceTree = "<group>"; };
 		E1E5FEE42B684EA800F1F8D6 /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
-		E1FDEBCB24310D0300E9EC63 /* UIAudioService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAudioService.swift; sourceTree = "<group>"; };
 		E1FDEBD02431335D00E9EC63 /* MediaItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaItemModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -295,7 +291,6 @@
 			isa = PBXGroup;
 			children = (
 				56E6A3CB2B72EB6400C86E09 /* Videos */,
-				E1E7CF8824390686003FF26E /* Sounds */,
 				E190F62F24293CE70030B996 /* Fonts */,
 				E190F621242929940030B996 /* Images.xcassets */,
 				565B361E2B7E9A17002D54DC /* Colors.xcassets */,
@@ -391,18 +386,9 @@
 			path = Repositories;
 			sourceTree = "<group>";
 		};
-		E1E7CF8824390686003FF26E /* Sounds */ = {
-			isa = PBXGroup;
-			children = (
-				E1D2005F244B7ECB00AC36B7 /* changeSelection.wav */,
-			);
-			path = Sounds;
-			sourceTree = "<group>";
-		};
 		E1FDEBCD2431122E00E9EC63 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				E1FDEBCB24310D0300E9EC63 /* UIAudioService.swift */,
 				E187BC6B2B658CB6007F989F /* LiveClockService.swift */,
 				E1C67F192BCF0A8D00523C3D /* GameControllerService.swift */,
 			);
@@ -489,7 +475,6 @@
 				E187BCA32B65AE63007F989F /* Figtree-Bold.ttf in Resources */,
 				E187BCA12B65AE63007F989F /* Figtree-Medium.ttf in Resources */,
 				E187BC9E2B65AE63007F989F /* Figtree-Regular.ttf in Resources */,
-				E1D20060244B7ECB00AC36B7 /* changeSelection.wav in Resources */,
 				E190F625242929940030B996 /* Preview Assets.xcassets in Resources */,
 				E187BCA42B65AE63007F989F /* Figtree-Semibold.ttf in Resources */,
 				E190F622242929940030B996 /* Images.xcassets in Resources */,
@@ -527,7 +512,6 @@
 				E1B9E3CC2B65771600163EDD /* MediaType.swift in Sources */,
 				E187BCA62B65BC18007F989F /* MainLayoutConstants.swift in Sources */,
 				E190F61C242929930030B996 /* AppDelegate.swift in Sources */,
-				E1FDEBCC24310D0300E9EC63 /* UIAudioService.swift in Sources */,
 				E1AD439E282FD3B8004BAB77 /* MediaTileView.swift in Sources */,
 				56B2918E2B7D5514000C6460 /* VideoViewModel.swift in Sources */,
 				E190F61E242929930030B996 /* SceneDelegate.swift in Sources */,

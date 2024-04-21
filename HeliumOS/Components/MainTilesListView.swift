@@ -46,7 +46,6 @@ struct MainTilesListView: View {
     }
     
     private func itemDidTap(_ item: MediaItemModel) {
-        UIAudioService.shared.playUISound(for: .changeSelection)
         activeItem = item
     }
 }

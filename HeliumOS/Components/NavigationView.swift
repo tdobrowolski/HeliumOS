@@ -18,8 +18,15 @@ struct NavigationView: View {
     }
     
     var content: some View {
+        ViewThatFits(in: .horizontal) {
+            extendedLayout
+            simplifiedLayout
+        }
+    }
+    
+    private var extendedLayout: some View {
         HStack {
-            mainButtons
+            getMainButtons()
                 .shadow(color: .oilBlack.opacity(0.6), radius: 16.0)
             Spacer()
             secondaryItems
@@ -27,7 +34,12 @@ struct NavigationView: View {
         }
     }
     
-    private var mainButtons: some View {
+    private var simplifiedLayout: some View {
+        getMainButtons(isSimplified: true)
+            .shadow(color: .oilBlack.opacity(0.6), radius: 16.0)
+    }
+    
+    private func getMainButtons(isSimplified: Bool = false) -> some View {
         HStack(spacing: 32.0) {
             leftShoulderControllerIcon
             ForEach(MenuItemType.mainMenuTypes) { item in
@@ -37,6 +49,12 @@ struct NavigationView: View {
                         set: { if $0 { selectedMenuItem = item } }
                     ),
                     item: item
+                )
+            }
+            if isSimplified {
+                MenuButton(
+                    isSelected: .constant(false),
+                    item: .profile
                 )
             }
             rightShoulderControllerIcon

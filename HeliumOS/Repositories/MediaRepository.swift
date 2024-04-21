@@ -125,5 +125,3 @@ struct MediaRepository {
         )
     }
 }
-
-// TODO: Remove unused assets
