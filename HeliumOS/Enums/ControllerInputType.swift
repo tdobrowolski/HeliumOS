@@ -6,7 +6,7 @@
 //  Copyright © 2024 Tobiasz Dobrowolski. All rights reserved.
 //
 
-enum ControllerInputType {
+enum ControllerInputType: CaseIterable {
     case buttonA
     
     case dPadRight
@@ -14,4 +14,7 @@ enum ControllerInputType {
     
     case rightShoulder
     case leftShoulder
+    
+    case rightTrigger
+    case leftTrigger
 }

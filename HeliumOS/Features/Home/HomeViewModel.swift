@@ -17,6 +17,7 @@ final class HomeViewModel: ObservableObject {
     @Published var selectedMenuItem: MenuItemType = .home
     @Published var isReadyToPlay = false
     @Published var isGameControllerConnected = false
+    @Published var currentControllerInputSymbols: [ControllerInputType: String] = [:]
     
     let mediaRepository = MediaRepository()
     let gameControllerService = GameControllerService()
@@ -30,7 +31,7 @@ final class HomeViewModel: ObservableObject {
         bind()
         setInitialActiveItem()
     }
-    
+        
     private func bind() {
         mediaRepository.mainMediaItems
             .removeDuplicates()
@@ -71,6 +72,11 @@ final class HomeViewModel: ObservableObject {
                 self?.handleControllerActionType(controllerActionType)
             }
             .store(in: &subscriptions)
+        
+        gameControllerService.currentControllerInputSymbols
+            .removeDuplicates()
+            .receive(on: DispatchQueue.main)
+            .assign(to: &$currentControllerInputSymbols)
     }
     
     private func setInitialActiveItem() {
@@ -91,19 +97,21 @@ final class HomeViewModel: ObservableObject {
         case .launchMedia: return
         case .nextMediaItem: selectNextMediaItem()
         case .prevMediaItem: selectPreviousMediaItem()
+        case .firstMediaItem: selectFirstMediaItem()
+        case .lastMediaItem: selectLastMediaItem()
         case .nextMenuItem: selectNextMenuItem()
         case .prevMenuItem: selectPreviousMenuItem()
         }
     }
+    
+    // MARK: Media Item logic
     
     private func selectNextMediaItem() {
         guard let selectedItemIndex = mediaItems.firstIndex(where: { $0 == selectedItem }) else { return }
         
         let nextItemIndex = selectedItemIndex + 1
         
-        guard mediaItems.indices.contains(nextItemIndex) else { return }
-        
-        selectedItem = mediaItems[nextItemIndex]
+        selectMediaItem(for: nextItemIndex)
     }
     
     private func selectPreviousMediaItem() {
@@ -111,10 +119,28 @@ final class HomeViewModel: ObservableObject {
         
         let prevItemIndex = selectedItemIndex - 1
         
-        guard mediaItems.indices.contains(prevItemIndex) else { return }
-        
-        selectedItem = mediaItems[prevItemIndex]
+        selectMediaItem(for: prevItemIndex)
     }
+    
+    private func selectFirstMediaItem() {
+        let firstItemIndex = 0
+        
+        selectMediaItem(for: firstItemIndex)
+    }
+    
+    private func selectLastMediaItem() {
+        let lastItemIndex = mediaItems.count - 1
+        
+        selectMediaItem(for: lastItemIndex)
+    }
+    
+    private func selectMediaItem(for index: Int) {
+        guard mediaItems.indices.contains(index) else { return }
+        
+        selectedItem = mediaItems[index]
+    }
+    
+    // MARK: Menu Item logic
     
     private func selectNextMenuItem() {
         let menuItems = MenuItemType.mainMenuTypes
@@ -122,9 +148,7 @@ final class HomeViewModel: ObservableObject {
         
         let nextItemIndex = selectedItemIndex + 1
         
-        guard menuItems.indices.contains(nextItemIndex) else { return }
-        
-        selectedMenuItem = menuItems[nextItemIndex]
+        selectMenuItem(for: nextItemIndex)
         gameControllerService.fireHapticFeedback()
     }
     
@@ -134,10 +158,14 @@ final class HomeViewModel: ObservableObject {
         
         let prevItemIndex = selectedItemIndex - 1
         
-        guard menuItems.indices.contains(prevItemIndex) else { return }
-        
-        selectedMenuItem = menuItems[prevItemIndex]
+        selectMenuItem(for: prevItemIndex)
         gameControllerService.fireHapticFeedback()
+    }
+    
+    private func selectMenuItem(for index: Int) {
+        guard MenuItemType.mainMenuTypes.indices.contains(index) else { return }
+        
+        selectedMenuItem = MenuItemType.mainMenuTypes[index]
     }
 }
 
@@ -149,6 +177,14 @@ fileprivate extension ControllerInputType {
         case .dPadRight: return .nextMediaItem
         case .leftShoulder: return .prevMenuItem
         case .rightShoulder: return .nextMenuItem
+        case .leftTrigger: return .firstMediaItem
+        case .rightTrigger: return .lastMediaItem
         }
     }
 }
+
+// TODO: Things to test
+// - DualSense Light color based on selected tile
+// - DualSense Adaptive Trigger force on first / last media item action
+// - Controller vibrating on Menu Item change
+// - Correct currentController state when controller is on / off while app running

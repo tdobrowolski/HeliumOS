@@ -9,7 +9,8 @@
 import SwiftUI
 
 struct ItemDetailsView: View {
-    var selectedItem: MediaItemModel?
+    @Binding var selectedItem: MediaItemModel?
+    @Binding var currentControllerInputSymbols: [ControllerInputType: String]
     
     var body: some View {
         content
@@ -27,7 +28,7 @@ struct ItemDetailsView: View {
                 capsuleView
                 activeItemGenresLabel
                 capsuleView
-                controllerButton
+                launchButton
             }
         }
     }
@@ -56,14 +57,14 @@ struct ItemDetailsView: View {
             .lineLimit(1)
     }
     
-    private var controllerButton: some View {
-        ControllerButton(
-            buttonType: .aButton,
+    private var launchButton: some View {
+        ActionButton(
+            symbolName: currentControllerInputSymbols[.buttonA]?.filled,
             text: selectedItem?.type.actionTitle
         ) {
             // TODO: Add action
         }
-        .buttonStyle(ControllerButtonStyle())
+        .buttonStyle(ActionButtonStyle())
     }
     
     private var capsuleView: some View {

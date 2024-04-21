@@ -12,6 +12,9 @@ enum HomeControllerActionType {
     case nextMediaItem
     case prevMediaItem
     
+    case firstMediaItem
+    case lastMediaItem
+    
     case nextMenuItem
     case prevMenuItem
 }

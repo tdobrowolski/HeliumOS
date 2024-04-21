@@ -11,7 +11,7 @@ import SwiftUI
 struct NavigationView: View {
     @Binding var currentTime: String
     @Binding var selectedMenuItem: MenuItemType
-    @Binding var isGameControllerConnected: Bool
+    @Binding var currentControllerInputSymbols: [ControllerInputType: String]
     
     var body: some View {
         content
@@ -29,7 +29,7 @@ struct NavigationView: View {
     
     private var mainButtons: some View {
         HStack(spacing: 32.0) {
-            if isGameControllerConnected { leftShoulderControllerIcon }
+            leftShoulderControllerIcon
             ForEach(MenuItemType.mainMenuTypes) { item in
                 MenuButton(
                     isSelected: .init(
@@ -39,7 +39,7 @@ struct NavigationView: View {
                     item: item
                 )
             }
-            if isGameControllerConnected { rightShoulderControllerIcon }
+            rightShoulderControllerIcon
         }
     }
     
@@ -64,20 +64,26 @@ struct NavigationView: View {
             .frame(alignment: .trailing)
     }
     
+    @ViewBuilder
     private var rightShoulderControllerIcon: some View {
-        Image(systemName: "r1.button.roundedbottom.horizontal.fill")
-            .font(.system(size: 24.0))
-            .fontWeight(.bold)
-            .symbolRenderingMode(.hierarchical)
-            .foregroundColor(.frostWhite)
+        if let rightShoulderSymbolName = currentControllerInputSymbols[.rightShoulder] {
+            Image(systemName: rightShoulderSymbolName.filled)
+                .font(.system(size: 24.0))
+                .fontWeight(.bold)
+                .symbolRenderingMode(.hierarchical)
+                .foregroundColor(.frostWhite)
+        }
     }
     
+    @ViewBuilder
     private var leftShoulderControllerIcon: some View {
-        Image(systemName: "l1.button.roundedbottom.horizontal.fill")
-            .font(.system(size: 24.0))
-            .fontWeight(.bold)
-            .symbolRenderingMode(.hierarchical)
-            .foregroundColor(.frostWhite)
+        if let leftShoulderSymbolName = currentControllerInputSymbols[.leftShoulder] {
+            Image(systemName: leftShoulderSymbolName.filled)
+                .font(.system(size: 24.0))
+                .fontWeight(.bold)
+                .symbolRenderingMode(.hierarchical)
+                .foregroundColor(.frostWhite)
+        }
     }
 }
 
@@ -87,7 +93,7 @@ struct NavigationView: View {
         NavigationView(
             currentTime: .constant("21:37"),
             selectedMenuItem: .constant(.home),
-            isGameControllerConnected: .constant(true)
+            currentControllerInputSymbols: .constant([:])
         )
         .padding(40.0)
     }

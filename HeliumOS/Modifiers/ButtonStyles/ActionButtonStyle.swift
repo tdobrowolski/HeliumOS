@@ -1,5 +1,5 @@
 //
-//  ControllerButtonStyle.swift
+//  ActionButtonStyle.swift
 //  HeliumOS
 //
 //  Created by Tobiasz Dobrowolski on 31/01/2024.
@@ -8,10 +8,10 @@
 
 import SwiftUI
 
-struct ControllerButtonStyle: ButtonStyle {
+struct ActionButtonStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
-            .scaleEffect(configuration.isPressed ? 0.85 : 1.0)
+            .scaleEffect(configuration.isPressed ? 0.9 : 1.0)
             .animation(.interactiveSpring, value: configuration.isPressed)
     }
 }

@@ -22,7 +22,7 @@
 		56B2918B2B7D5490000C6460 /* PlayerContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B2918A2B7D5490000C6460 /* PlayerContainerView.swift */; };
 		56B2918E2B7D5514000C6460 /* VideoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B2918D2B7D5514000C6460 /* VideoViewModel.swift */; };
 		56E6A3CA2B72E7F900C86E09 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E6A3C92B72E7F900C86E09 /* VideoView.swift */; };
-		E17CBE792B6AB9DA002A7253 /* ControllerButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17CBE782B6AB9DA002A7253 /* ControllerButtonStyle.swift */; };
+		E17CBE792B6AB9DA002A7253 /* ActionButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17CBE782B6AB9DA002A7253 /* ActionButtonStyle.swift */; };
 		E187BC6C2B658CB6007F989F /* LiveClockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E187BC6B2B658CB6007F989F /* LiveClockService.swift */; };
 		E187BC702B65A7ED007F989F /* CalSans-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = E187BC6F2B65A7ED007F989F /* CalSans-Semibold.otf */; };
 		E187BC992B65AC14007F989F /* FigtreeWeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = E187BC982B65AC14007F989F /* FigtreeWeight.swift */; };
@@ -67,8 +67,7 @@
 		E1B9E3D32B6580A500163EDD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B9E3D22B6580A500163EDD /* HomeView.swift */; };
 		E1C67F1A2BCF0A8D00523C3D /* GameControllerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C67F192BCF0A8D00523C3D /* GameControllerService.swift */; };
 		E1D20060244B7ECB00AC36B7 /* changeSelection.wav in Resources */ = {isa = PBXBuildFile; fileRef = E1D2005F244B7ECB00AC36B7 /* changeSelection.wav */; };
-		E1E5FEE52B684EA800F1F8D6 /* ControllerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E5FEE42B684EA800F1F8D6 /* ControllerButton.swift */; };
-		E1E5FEE72B684F4900F1F8D6 /* ControllerButtonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E5FEE62B684F4900F1F8D6 /* ControllerButtonType.swift */; };
+		E1E5FEE52B684EA800F1F8D6 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E5FEE42B684EA800F1F8D6 /* ActionButton.swift */; };
 		E1FDEBCC24310D0300E9EC63 /* UIAudioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FDEBCB24310D0300E9EC63 /* UIAudioService.swift */; };
 		E1FDEBD12431335D00E9EC63 /* MediaItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FDEBD02431335D00E9EC63 /* MediaItemModel.swift */; };
 /* End PBXBuildFile section */
@@ -89,7 +88,7 @@
 		56B2918A2B7D5490000C6460 /* PlayerContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerContainerView.swift; sourceTree = "<group>"; };
 		56B2918D2B7D5514000C6460 /* VideoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewModel.swift; sourceTree = "<group>"; };
 		56E6A3C92B72E7F900C86E09 /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
-		E17CBE782B6AB9DA002A7253 /* ControllerButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerButtonStyle.swift; sourceTree = "<group>"; };
+		E17CBE782B6AB9DA002A7253 /* ActionButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButtonStyle.swift; sourceTree = "<group>"; };
 		E187BC6B2B658CB6007F989F /* LiveClockService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveClockService.swift; sourceTree = "<group>"; };
 		E187BC6F2B65A7ED007F989F /* CalSans-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CalSans-Semibold.otf"; sourceTree = "<group>"; };
 		E187BC892B65AB56007F989F /* Figtree-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Figtree-Medium.ttf"; sourceTree = "<group>"; };
@@ -136,8 +135,7 @@
 		E1B9E3D22B6580A500163EDD /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		E1C67F192BCF0A8D00523C3D /* GameControllerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameControllerService.swift; sourceTree = "<group>"; };
 		E1D2005F244B7ECB00AC36B7 /* changeSelection.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = changeSelection.wav; sourceTree = "<group>"; };
-		E1E5FEE42B684EA800F1F8D6 /* ControllerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerButton.swift; sourceTree = "<group>"; };
-		E1E5FEE62B684F4900F1F8D6 /* ControllerButtonType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerButtonType.swift; sourceTree = "<group>"; };
+		E1E5FEE42B684EA800F1F8D6 /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
 		E1FDEBCB24310D0300E9EC63 /* UIAudioService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAudioService.swift; sourceTree = "<group>"; };
 		E1FDEBD02431335D00E9EC63 /* MediaItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaItemModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -199,7 +197,7 @@
 		E17CBE772B6AB9CC002A7253 /* ButtonStyles */ = {
 			isa = PBXGroup;
 			children = (
-				E17CBE782B6AB9DA002A7253 /* ControllerButtonStyle.swift */,
+				E17CBE782B6AB9DA002A7253 /* ActionButtonStyle.swift */,
 			);
 			path = ButtonStyles;
 			sourceTree = "<group>";
@@ -325,7 +323,6 @@
 				E187BCA72B65BC7F007F989F /* Genres */,
 				E1AD4396282FD0F0004BAB77 /* MenuItemType.swift */,
 				E1B9E3CB2B65771600163EDD /* MediaType.swift */,
-				E1E5FEE62B684F4900F1F8D6 /* ControllerButtonType.swift */,
 				E187BCA52B65BC18007F989F /* MainLayoutConstants.swift */,
 				563D2C032B8685C30035620D /* AnimationConstants.swift */,
 				565B36202B7E9BAE002D54DC /* FileExtension.swift */,
@@ -354,7 +351,7 @@
 			isa = PBXGroup;
 			children = (
 				E1AD43A5282FD703004BAB77 /* MenuButton.swift */,
-				E1E5FEE42B684EA800F1F8D6 /* ControllerButton.swift */,
+				E1E5FEE42B684EA800F1F8D6 /* ActionButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -521,7 +518,7 @@
 				565B36232B7E9C27002D54DC /* VisualContentModel.swift in Sources */,
 				E1ACA4752BD3098A00125426 /* UIImage+Extension.swift in Sources */,
 				56B2918B2B7D5490000C6460 /* PlayerContainerView.swift in Sources */,
-				E17CBE792B6AB9DA002A7253 /* ControllerButtonStyle.swift in Sources */,
+				E17CBE792B6AB9DA002A7253 /* ActionButtonStyle.swift in Sources */,
 				E1B9E3C62B6576D800163EDD /* GameGenreType.swift in Sources */,
 				56E6A3CA2B72E7F900C86E09 /* VideoView.swift in Sources */,
 				565B36292B7E9C86002D54DC /* MovieMediaItemModel.swift in Sources */,
@@ -535,7 +532,6 @@
 				56B2918E2B7D5514000C6460 /* VideoViewModel.swift in Sources */,
 				E190F61E242929930030B996 /* SceneDelegate.swift in Sources */,
 				E1C67F1A2BCF0A8D00523C3D /* GameControllerService.swift in Sources */,
-				E1E5FEE72B684F4900F1F8D6 /* ControllerButtonType.swift in Sources */,
 				563D2C022B8679590035620D /* BootView.swift in Sources */,
 				565B36212B7E9BAE002D54DC /* FileExtension.swift in Sources */,
 				E1ACA4732BD3046100125426 /* ControllerInputType.swift in Sources */,
@@ -545,7 +541,7 @@
 				E1AD43A6282FD703004BAB77 /* MenuButton.swift in Sources */,
 				565B36252B7E9C58002D54DC /* GameMediaItemModel.swift in Sources */,
 				E1ACA4772BD309BA00125426 /* UIColor+Extension.swift in Sources */,
-				E1E5FEE52B684EA800F1F8D6 /* ControllerButton.swift in Sources */,
+				E1E5FEE52B684EA800F1F8D6 /* ActionButton.swift in Sources */,
 				E1AD43A0282FD41D004BAB77 /* MainTilesListView.swift in Sources */,
 				563D2C072B8688F00035620D /* RootView.swift in Sources */,
 				E1AD439C282FD340004BAB77 /* BackgroundView.swift in Sources */,

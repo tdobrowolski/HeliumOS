@@ -1,5 +1,5 @@
 //
-//  ControllerButton.swift
+//  ActionButton.swift
 //  HeliumOS
 //
 //  Created by Tobiasz Dobrowolski on 29/01/2024.
@@ -8,8 +8,8 @@
 
 import SwiftUI
 
-struct ControllerButton: View {
-    let buttonType: ControllerButtonType
+struct ActionButton: View {
+    let symbolName: String?
     let text: String?
     let onTap: (() -> Void)?
         
@@ -28,16 +28,19 @@ struct ControllerButton: View {
         }
     }
     
+    @ViewBuilder
     private var icon: some View {
-        Image(systemName: buttonType.iconName)
-            .font(.system(size: 28.0))
-            .fontWeight(.bold)
-            .symbolRenderingMode(.hierarchical)
-            .foregroundColor(buttonType.iconColor)
-            .background {
-                Circle()
-                    .fill(Color.frostWhite.opacity(0.9))
-            }
+        if let symbolName {
+            Image(systemName: symbolName)
+                .font(.system(size: 28.0))
+                .fontWeight(.bold)
+                .symbolRenderingMode(.hierarchical)
+                .foregroundColor(.blueNeon)
+                .background {
+                    Circle()
+                        .fill(Color.frostWhite.opacity(0.9))
+                }
+        }
     }
     
     @ViewBuilder
@@ -52,11 +55,11 @@ struct ControllerButton: View {
     }
     
     init(
-        buttonType: ControllerButtonType,
+        symbolName: String?,
         text: String?,
         onTap: (() -> Void)? = nil
     ) {
-        self.buttonType = buttonType
+        self.symbolName = symbolName
         self.text = text
         self.onTap = onTap
     }
@@ -66,7 +69,7 @@ struct ControllerButton: View {
     ZStack {
         Color.oilBlack
             .ignoresSafeArea()
-        ControllerButton(buttonType: .aButton, text: "Launch game")
-            .buttonStyle(ControllerButtonStyle())
+        ActionButton(symbolName: nil, text: "Launch game")
+            .buttonStyle(ActionButtonStyle())
     }
 }

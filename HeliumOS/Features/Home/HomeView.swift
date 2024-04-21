@@ -34,7 +34,7 @@ struct HomeView: View {
         NavigationView(
             currentTime: $viewModel.currentTime,
             selectedMenuItem: $viewModel.selectedMenuItem,
-            isGameControllerConnected: $viewModel.isGameControllerConnected
+            currentControllerInputSymbols: $viewModel.currentControllerInputSymbols
         )
         .padding(
             [.leading, .top, .trailing],
@@ -56,7 +56,10 @@ struct HomeView: View {
     }
     
     private var selectedItemDetails: some View {
-        ItemDetailsView(selectedItem: viewModel.selectedItem)
+        ItemDetailsView(
+            selectedItem: $viewModel.selectedItem,
+            currentControllerInputSymbols: $viewModel.currentControllerInputSymbols
+        )
             .padding(.horizontal, MainLayoutConstants.safeAreaPadding)
     }
     

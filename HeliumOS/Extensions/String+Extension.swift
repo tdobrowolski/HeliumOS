@@ -8,4 +8,6 @@
 
 extension String {
     static var timePlaceholder: String { "--:--" }
+    
+    var filled: String { self.appending(".fill") }
 }
