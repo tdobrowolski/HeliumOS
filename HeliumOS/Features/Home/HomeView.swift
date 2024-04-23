@@ -83,13 +83,6 @@ struct HomeView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static let viewModel = HomeViewModel()
-    
-    static var previews: some View {
-        HomeView(viewModel: viewModel)
-            .previewDevice(.init(rawValue: "iPad8,1"))
-            .previewDisplayName("iPad Pro")
-            .previewLayout(.fixed(width: 1194.0, height: 834.0))
-    }
+#Preview("iPad Pro") {
+    HomeView(viewModel: HomeViewModel())
 }

@@ -182,9 +182,3 @@ fileprivate extension ControllerInputType {
         }
     }
 }
-
-// TODO: Things to test
-// - DualSense Light color based on selected tile
-// - DualSense Adaptive Trigger force on first / last media item action
-// - Controller vibrating on Menu Item change
-// - Correct currentController state when controller is on / off while app running
