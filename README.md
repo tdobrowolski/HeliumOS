@@ -46,6 +46,7 @@ _HeliumOS on iPad Mini_
 
 ## Known issues
 - The media item on the left of currently selected item is not fully tappable when not fully visible.
+- Profile button on the Navigation Bar is not selectable with a controller, when there is no space for full, expanded Navigation Bar
 
 ## Original concept from 2017
 If you want to see how concept evolved, you can [visit original projects page on Behance](https://www.behance.net/gallery/48880999/Helium-OS-designed-for-future "Project on Behance").
