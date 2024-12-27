@@ -60,7 +60,7 @@ struct HomeView: View {
             selectedItem: $viewModel.selectedItem,
             currentControllerInputSymbols: $viewModel.currentControllerInputSymbols
         )
-            .padding(.horizontal, MainLayoutConstants.safeAreaPadding)
+        .padding(.horizontal, MainLayoutConstants.safeAreaPadding)
     }
     
     private var itemsList: some View {

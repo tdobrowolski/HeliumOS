@@ -23,16 +23,35 @@ struct ItemDetailsView: View {
     private var content: some View {
         VStack(alignment: .leading, spacing: 16.0) {
             activeItemTitle
-            HStack(spacing: 16.0) {
-                activeItemSubtitle
-                capsuleView
-                activeItemGenresLabel
-                capsuleView
-                launchButton
-            }
+            sublabels
         }
     }
-    
+
+    private var sublabels: some View {
+        ViewThatFits(in: .horizontal) {
+            longSublabels
+            shortSublabels
+        }
+    }
+
+    private var longSublabels: some View {
+        HStack(spacing: 16.0) {
+            activeItemSubtitle
+            capsuleView
+            activeItemGenresLabel
+            capsuleView
+            launchButton
+        }
+    }
+
+    private var shortSublabels: some View {
+        HStack(spacing: 16.0) {
+            activeItemSubtitle
+            capsuleView
+            launchButton
+        }
+    }
+
     private var activeItemTitle: some View {
         Text(selectedItem?.heroTitle ?? "")
             .font(.calSans(size: 62.0))
